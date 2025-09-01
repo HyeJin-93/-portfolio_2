@@ -1,0 +1,412 @@
+@charset "UTF-8";
+
+/* 폰트 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GounBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GounBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {display: block;}
+
+li {list-style: none;}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* 전체 설정 */
+html {
+  font-size: 10px;
+  font-family: 'Pretendard';
+}
+
+.container {
+  width: 1200px;
+  height: inherit;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+/* 헤더 영역 */
+#header {
+  width: 100%;
+  height: 140px;
+  background-color: #FFF;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+.header .logo img {width: 100%;}
+
+.header .header_nav {padding-top: 70px;}
+.header .header_nav .menu {display: flex;}
+.header .header_nav .menu li {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.header .header_nav .menu li:last-of-type {
+  border: 1px solid #3C4C3D;
+}
+.header .header_nav .menu li a {  
+  font-size: 2rem;
+  font-weight: 400;
+  color: #3C4C3D;
+}
+
+/* 배너 영역 */
+
+#banner{
+    height: 700px;
+    width: 100%;
+}
+.banner{}
+
+.banner .swiper_slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(100px);
+}
+
+.banner .swiper_slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* .banner .swiper_slide.prev {
+    transform: translateX(-100px);
+    opacity: 0;
+} */
+
+.banner .swiper_slide .slide_img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner .swiper_slide .area{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px;
+    z-index: 2;
+    color: white;
+}
+
+.banner .swiper_slide .area .slide_text{
+    margin-top: 200px;
+    animation: slideInUp 1s ease-out 0.3s both;
+}
+
+/* 애니메이션 */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner .swiper_slide .area .slide_text .text_title{
+    font-family: 'GounBatang';
+    font-weight: 700;
+    font-size: 6rem;  
+    margin-bottom: 20px;
+}
+.banner .swiper_slide .area .slide_text .text_sub{
+    font-size: 3.6rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.banner .swiper_slide .area .controller{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.banner .swiper_slide .area .controller .progress{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.banner .swiper_slide .area .controller .progress .progress_page{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+
+.banner .swiper_slide .area .controller .progress .progress_page .progress_bar{
+    width: 200px;
+    height: 2px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.banner .swiper_slide .area .controller .progress .progress_bar .progress_page .bar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #fff, #f0f0f0);
+    border-radius: 10px;
+    transition: width 0.8s ease-in-out;
+    width: 0%;
+    animation: none;
+}
+.banner .swiper_slide .area .controller .progress .progress_bar .bar.animating{
+    animation: progressFill 5s linear forwards;
+}
+
+/* 애니메이션 */
+@keyframes progressFill {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.banner .swiper_slide .area .controller .button{
+    display: flex;
+    gap: 15px;
+}
+.banner .swiper_slide .area .controller .button .perv_btn, .next_btn{
+    width: 50px;
+    height: 50px;
+    
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    position: relative;
+}
+.banner .swiper_slide .area .controller .button {}
+
+
+#weather {
+    height: 200px;
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+/* course 영역 */
+#course{
+    height: 800px;
+    background-color: #005503;
+}
+
+.course{}
+.course .course_title{
+    position: sticky;
+    top: 80px;
+    left: 0;
+    width: 70%;
+    height: 5vw;
+    font-size: 4vw;
+    font-weight: 700;
+    font-family: var(--mainNum-font);    
+    border-bottom: 2px solid #000;
+    text-transform: capitalize;
+    border-bottom: 0.4vw solid var(--black100);
+    margin-bottom: 100px;
+}
+
+.course .item_wrap{}
+.course .item_wrap .course_item{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: sticky;
+    left: 0;
+}
+.course .item_wrap .course_item.c1{
+    top: 180px;
+}
+.course .item_wrap .course_item.c2{
+    top: 180px;
+}
+.course .item_wrap .course_item.c3{
+    top: 180px;
+}
+
+
+#ranking {
+    height: 590px;
+    background-color: lightblue;
+}
+
+/* 푸터 영역 */
+#footer {
+    width: 100%;
+    background-color: #192922;
+}
+
+.footer .f_top {height: 250px;}
+
+.footer .f_top .f_btn {
+    padding: 80px 50px 0 0;
+    /* width: 50px;
+    height: 50px;    */
+}
+
+.footer .f_top .f_btn img {
+    display: block;
+    align: right;
+}
+
+.footer .f_bottom {
+    height: 150px;
+    display: flex;
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.footer .f_bottom .f_bottom_L {
+    width: 70%;
+    padding-left: 50px;
+}
+
+.footer .f_bottom .f_bottom_L .f_info {display: flex;}
+
+.footer .f_bottom .f_bottom_L .f_info {}
+
+.footer .f_bottom .f_bottom_L .f_info li {
+    display: block;
+    line-height: 25px;
+    padding-left: 50px;
+    color: #FFFFFF;
+}
+
+.footer .f_bottom .f_bottom_R {
+    width: 30%;
+    line-height: 25px;
+    padding-right: 50px;
+    text-align: right;
+}
+
+.footer .f_bottom .f_bottom_R .f_link {}
+
+.footer .f_bottom .f_bottom_R .f_link a {color: #FFF;}
+
+.footer .f_bottom .f_bottom_R .f_link a span {
+    font-weight: 500;
+    padding-right: 30px;
+}
+
+.footer .f_bottom .f_bottom_R .f_copy {
+    font-family: 'Lato';
+    color: #919191
+}

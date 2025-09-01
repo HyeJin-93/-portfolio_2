@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peaklog</title>
+
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="./css/style_sub1.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <header class="header">
+                <a href="./index_sub1.html" class="logo">
+                    <img src="./img/logo.png" alt="로고">
+                </a><!--.logo-->
+                <nav class="header_nav">
+                    <ul class="menu">
+                        <li><a href="#">등산기록</a></li>
+                        <li><a href="#">코스검색</a></li>
+                        <li><a href="#">도전명산</a></li>
+                        <li><a href="#">로그인</a></li>
+                    </ul><!--.menu-->
+                </nav><!--.header_nav-->
+            </header><!--.header-->
+        </div>
+    </header><!--#header-->
+    <main>
+        <div id="new">
+            <div class="container">
+                <div class="new">
+                    <h2 class="title"> 새 기록 <em>New Log</em> </h2>
+                    <form class="accordion">
+                        <fieldset class="desc">
+                            <input type="text" name="name" placeholder="산 이름">
+                            <input type="deta" name="deta" placeholder="날짜">
+                            <input type="file" name="file" placeholder="인증 사진">
+                            <input type="time" name="start_time" placeholder="출발 시간">
+                            <input type="time" name="peak_time" placeholder="완등 시간">
+                            <input type="time" name="end_time" placeholder="하산 시간">
+                            <input type="text" name="record" placeholder="체감 난이도, 루트, 기타 의견 등을 적어주세요.">                  
+                        </fieldset>
+                    </form>
+                    <form action="" class="btn">
+                        <input type="submit" value="기록하기">
+                    </form>
+                </div><!--.new-->
+            </div>
+        </div><!--#new-->
+
+        <div id="calendar">
+            <div class="container">
+                <div class="calendar">
+                    <div class="date-header">
+                        <div class="year" id="yearDisplay"></div>
+                        <div class="month" id="monthDisplay"></div>
+                    </div>
+                    <div class="calendar-line">
+                        <div class="day-names" id="dayNames"></div>
+                        <div class="date-row" id="dateRow"></div>
+                    </div>
+                </div><!--.calendar-->
+            </div>
+        </div><!--#calendar-->
+
+        <div dir="history">
+            <div class="container">
+                <div class="history">
+                    <h2 class="title"> 지난 기록 <em>History Log</em> </h2>
+                    <section class="box">
+                        <article class="box_top">
+                            <div class="box_deta">
+                                <p class="month">08 /</p>
+                                <p class="day">23</p>
+                            </div><!--.box_deta-->
+                            <div class="box_mount">
+                                <p class="month">수락산</p>
+                            </div><!--.box_mount-->
+                        </article>
+                        <article class="box_bottom">
+                            <div class="box_imges">
+                                <img src="./img/history_img_01.png" alt="수락산기록이미지">
+                            </div><!--.box_imges-->
+                            <div class="box_time">
+                                <p class="time">총 3시간 45분</p>
+                                <small>출발<br>10:40</small>
+                                <small>정상<br>12:15</small>
+                                <small>도착<br>14:25</small>
+                            </div><!--.box_time-->
+                            <div class="box_comment">
+                                <p class="comment">
+                                    오랜만에 암등은 난이도 2배인 거 같다. 그래도 암등 최고!<br>
+                                    정상에서 먹는 점심은 더 맛있었고, 아이스크림 아저씨 덕분에 시원한 후식으로 완료~
+                                </p>
+                            </div><!--.box_comment-->
+                        </article>
+                    </section>
+                    <section class="box">
+                        <article class="box_top">
+                            <div class="box_deta">
+                                <p class="month">08/</p>
+                                <p class="day">23</p>
+                            </div><!--.box_deta-->
+                            <div class="box_mount">
+                                <p class="month">소래산</p>
+                        </div><!--.box_mount-->
+                        </article>
+                        <article class="box_bottom">
+                            <div class="box_imges">
+                                <img src="./img/history_img_02.png" alt="소래산기록이미지">
+                            </div><!--.box_imges-->
+                            <div class="box_time">
+                                <p class="time">총 2시간 15분</p>
+                                <small>출발<br>09:15</small>
+                                <small>정상<br>10:25</small>
+                                <small>도착<br>11:30</small>
+                            </div><!--.box_time-->
+                            <div class="box_comment">
+                                <p class="comment">
+                                    날씨 너무 좋으니 가볍게.<br>
+                                    오랜만에 소래산이라 길을 약간 헤맸다 :)<br>
+                                    그래도 정상은 무사히 도착!
+                                </p>
+                            </div><!--.box_comment-->
+                        </article>
+                    </section>
+                </div><!--.history-->
+            </div>
+        </div><!--#history-->
+    </main>
+    
+    
+    <!-- 스크립트 -->
+    <script>
+        var today = new Date();
+        var currentYear = today.getFullYear();
+        var currentMonth = today.getMonth();
+        var currentDate = today.getDate();
+        
+        var monthNames = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+        var dayNames = ['일', '월', '화', '수', '목', '금', '토'];
+        var dayNamesEng = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+        
+        function showAllConcerts() {
+            alert('전체 콘서트 목록을 보여줍니다.');
+        }
+        
+        function selectDate(selectedDay) {
+            var monthStr = (currentMonth + 1) < 10 ? '0' + (currentMonth + 1) : (currentMonth + 1);
+            var dayStr = selectedDay < 10 ? '0' + selectedDay : selectedDay;
+            console.log(currentYear + '-' + monthStr + '-' + dayStr + ' 선택됨');
+        }
+        
+        function createDateCell(day, isToday) {
+            var dateCell = document.createElement('div');
+            dateCell.className = 'date-cell';
+            if (isToday) {
+                dateCell.className = 'date-cell today';
+            }
+            dateCell.innerHTML = day < 10 ? '0' + day : day;
+            dateCell.setAttribute('data-day', day);
+            return dateCell;
+        }
+        
+        function createDayNameCell(dayName) {
+            var dayNameCell = document.createElement('div');
+            dayNameCell.className = 'day-name-cell';
+            dayNameCell.innerHTML = dayName;
+            return dayNameCell;
+        }
+        
+        function setupCalendar() {
+            // 연도와 월 표시
+            document.getElementById('yearDisplay').innerHTML = currentYear;
+            document.getElementById('monthDisplay').innerHTML = monthNames[currentMonth];
+            
+            // 이번 달 일수 계산
+            var daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            
+            // 요일 헤더 생성
+            var dayNamesContainer = document.getElementById('dayNames');
+            for (var day = 1; day <= daysInMonth; day++) {
+                var date = new Date(currentYear, currentMonth, day);
+                var dayOfWeek = date.getDay();
+                var dayNameCell = createDayNameCell(dayNames[dayOfWeek]);
+                dayNamesContainer.appendChild(dayNameCell);
+            }
+            
+            // 날짜 셀 생성
+            var dateContainer = document.getElementById('dateRow');
+            for (var day = 1; day <= daysInMonth; day++) {
+                var isToday = day === currentDate;
+                var dateCell = createDateCell(day, isToday);
+                dateContainer.appendChild(dateCell);
+            }
+            
+            // 클릭 이벤트 추가
+            var dateCells = document.querySelectorAll('.date-cell');
+            for (var i = 0; i < dateCells.length; i++) {
+                var cell = dateCells[i];
+                var dayValue = parseInt(cell.getAttribute('data-day'));
+                cell.addEventListener('click', createClickHandler(dayValue));
+            }
+            
+            // 오늘 날짜로 스크롤
+            setTimeout(scrollToToday, 200);
+        }
+        
+        function createClickHandler(day) {
+            return function() {
+                selectDate(day);
+            };
+        }
+        
+        function scrollToToday() {
+            var todayElement = document.querySelector('.date-cell.today');
+            if (todayElement) {
+                todayElement.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+            }
+        }
+        
+        // 초기화
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupCalendar);
+        } else {
+            setupCalendar();
+        }
+    </script>
+</body>
+</html>
