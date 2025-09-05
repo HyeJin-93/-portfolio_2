@@ -1,352 +1,281 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peaklog</title>
-    <link rel="icon" href="./imgs/favicon.png">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peaklog</title>
 
-    
+  <link rel="icon" href="./image/favicon.png">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+
 </head>
-<body>
-    <header id="header">
-        <div class="container">
-            <div class="header">
-                <a href="./index.html" class="logo">
-                    <img src="./imgs/logo_B.png" alt="로고">
-                </a><!--.logo-->
-                <nav class="header_nav">
-                    <ul class="menu">
-                        <li><a href="#">등산기록</a></li>
-                        <li><a href="#">코스검색</a></li>
-                        <li><a href="#">도전명산</a></li>
-                        <li><a href="#">로그인</a></li>
-                    </ul><!--.menu-->
-                </nav><!--.header_nav-->
-            </div><!--.header-->
-        </div><!--.container-->
-    </header><!--#header-->
-    <main>
-        <div id="banner">
-            <div class="container">
-                <div class="banner">
-                    <div class="swiper_slide s1 active">
-                        <div class="slide_img">
-                            <img src="./imgs/slide_1.png" alt="슬라이드이미지1">
-                        </div><!--.slide_img-->
-                        <div class="area">
-                            <div class="slide_text">
-                                <h3 class="text_title">스쳐간 바람부터 머물던 햇살까지</h3>
-                                <p class="text_sub">산에서의 작은 순간들이 나만의 이야기가 됩니다.</p>
-                            </div><!--.slide_text-->
-                            <div class="controller">
-                                <div class="progress">
-                                    <div class="progress_page">
-                                        <span class="num">01</span>
-                                        <div class="progress_bar">
-                                            <span class="bar animating"></span>
-                                        </div><!--.progress_bar-->
-                                        <span class="total">03</span>
-                                    </div><!--.progress_page-->
-                                </div><!--.progress-->
-                                <div class="button">
-                                    <div class="perv_btn"><img src="./imgs/arrow_L.png" alt="이전버튼"></div>
-                                    <div class="next_btn"><img src="./imgs/arrow_R.png" alt="다음버튼"></div>
-                                </div><!--.button-->
-                            </div><!--.controller-->
-                        </div><!--.area-->
-                    </div><!--.swiper_slide s1-->
-                    <div class="swiper_slide s2">
-                        <div class="slide_img">
-                            <img src="./imgs/slide_2.png" alt="슬라이드이미지2">
-                        </div><!--.slide_img-->
-                        <div class="area">
-                            <div class="slide_text">
-                                <h3 class="text_title">산이 건네준 고요 속의 이야기</h3>
-                                <p class="text_sub">발걸음마다 스며든 자연의 목소리를 담아두세요.</p>
-                            </div><!--.slide_text-->
-                            <div class="controller">
-                                <div class="progress">
-                                    <div class="progress_page">
-                                        <span class="num">02</span>
-                                        <div class="progress_bar">
-                                            <span class="bar"></span>
-                                        </div><!--.progress_bar-->
-                                        <span class="total">03</span>
-                                    </div><!--.progress_page-->
-                                </div><!--.progress-->
-                                <div class="button">
-                                    <div class="perv_btn"></div>
-                                    <div class="next_btn"></div>
-                                </div><!--.button-->
-                            </div><!--.controller-->
-                        </div><!--.area-->
-                    </div><!--.swiper_slide s2-->
-                    <div class="swiper_slide s3">
-                        <div class="slide_img">
-                            <img src="./imgs/slide_3.png" alt="슬라이드이미지3">
-                        </div><!--.slide_img-->
-                        <div class="area">
-                            <div class="slide_text">
-                                <h3 class="text_title">기억은 흐르지만, 기록은 머뭅니다</h3>
-                                <p class="text_sub">흘러간 순간을 붙잡아, 내일도 다시 꺼내볼 수 있도록</p>
-                            </div><!--.slide_text-->
-                            <div class="controller">
-                                <div class="progress">
-                                    <div class="progress_page">
-                                        <span class="num">03</span>
-                                        <div class="progress_bar">
-                                            <span class="bar"></span>
-                                        </div><!--.progress_bar-->
-                                        <span class="total">03</span>
-                                    </div><!--.progress_page-->
-                                </div><!--.progress-->
-                                <div class="button">
-                                    <div class="perv_btn"></div>
-                                    <div class="next_btn"></div>
-                                </div><!--.button-->
-                            </div><!--.controller-->
-                        </div><!--.area-->
-                    </div><!--.swiper_slide s3-->
-                </div><!--.banner-->
-            </div>
-        </div><!--#banner-->
-        <div id="weather">
-            <div class="container">
-                <div class="weather">
 
-                </div><!--.weather-->
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="header">
+        <a href="./index.html" class="logo">
+          <img src="./image/1_header/logo_W.png" alt="로고">
+        </a><!--.logo-->
+        <nav class="header_nav">
+          <ul class="menu">
+            <li><a href="./index_sub1.html">등산기록</a></li>
+            <li><a href="./index_sub2-1.html">코스검색</a></li>
+            <li><a href="./index_sub3.html">도전명산</a></li>
+            <li><a href="#">로그인</a></li>
+          </ul><!--.menu-->
+        </nav><!--.header_nav-->
+      </div><!--.header-->
+    </div><!--.container-->
+  </header><!--#header-->
+  <main>
+    <div id="banner">
+      <div class="container">
+        <div class="banner">
+          <div class="swiper_slide s1 active">
+            <div class="slide_img">
+              <img src="./image/2_main/slide_1.png" alt="슬라이드이미지1">
+            </div><!--.slide_img-->
+            <div class="area">
+              <div class="slide_text">
+                <h3 class="text_title">스쳐간 바람부터 머물던 햇살까지</h3>
+                <p class="text_sub">산에서의 작은 순간들이 나만의 이야기가 됩니다.</p>
+              </div><!--.slide_text-->
+              <div class="controller">
+                <div class="progress">
+                  <div class="progress_page">
+                    <span class="num">01</span>
+                    <div class="progress_bar">
+                      <span class="bar animating"></span>
+                    </div><!--.progress_bar-->
+                    <span class="total">03</span>
+                  </div><!--.progress_page-->
+                </div><!--.progress-->
+                <div class="button">
+                  <div class="perv_btn"><img src="./image/2_main/arrow_L.png" alt="이전버튼"></div>
+                  <div class="next_btn"><img src="./image/2_main/arrow_R.png" alt="다음버튼"></div>
+                </div><!--.button-->
+              </div><!--.controller-->
+            </div><!--.area-->
+          </div><!--.swiper_slide s1-->
+          <div class="swiper_slide s2">
+            <div class="slide_img">
+              <img src="./image/2_main/slide_2.png" alt="슬라이드이미지2">
+            </div><!--.slide_img-->
+            <div class="area">
+              <div class="slide_text">
+                <h3 class="text_title">산이 건네준 고요 속의 이야기</h3>
+                <p class="text_sub">발걸음마다 스며든 자연의 목소리를 담아두세요.</p>
+              </div><!--.slide_text-->
+              <div class="controller">
+                <div class="progress">
+                  <div class="progress_page">
+                    <span class="num">02</span>
+                    <div class="progress_bar">
+                      <span class="bar"></span>
+                    </div><!--.progress_bar-->
+                    <span class="total">03</span>
+                  </div><!--.progress_page-->
+                </div><!--.progress-->
+                <div class="button">
+                  <div class="perv_btn"><img src="./image/2_main/arrow_L.png" alt="이전버튼"></div>
+                  <div class="next_btn"><img src="./image/2_main/arrow_R.png" alt="다음버튼"></div>
+                </div><!--.button-->
+              </div><!--.controller-->
+            </div><!--.area-->
+          </div><!--.swiper_slide s2-->
+          <div class="swiper_slide s3">
+            <div class="slide_img">
+              <img src="./image/2_main/slide_3.png" alt="슬라이드이미지3">
+            </div><!--.slide_img-->
+            <div class="area">
+              <div class="slide_text">
+                <h3 class="text_title">기억은 흐르지만, 기록은 머뭅니다</h3>
+                <p class="text_sub">흘러간 순간을 붙잡아, 내일도 다시 꺼내볼 수 있도록</p>
+              </div><!--.slide_text-->
+              <div class="controller">
+                <div class="progress">
+                  <div class="progress_page">
+                    <span class="num">03</span>
+                    <div class="progress_bar">
+                      <span class="bar"></span>
+                    </div><!--.progress_bar-->
+                    <span class="total">03</span>
+                  </div><!--.progress_page-->
+                </div><!--.progress-->
+                <div class="button">
+                  <div class="perv_btn"><img src="./image/2_main/arrow_L.png" alt="이전버튼"></div>
+                  <div class="next_btn"><img src="./image/2_main/arrow_R.png" alt="다음버튼"></div>
+                </div><!--.button-->
+              </div><!--.controller-->
+            </div><!--.area-->
+          </div><!--.swiper_slide s3-->
+        </div><!--.banner-->
+      </div>
+    </div><!--#banner-->
+    <div id="weather">
+      <div class="container">
+        <div class="weather">
+
+        </div><!--.weather-->
+      </div>
+    </div><!--#weather-->
+    <div id="course">
+      <div class="container">
+        <div class="course">
+          <h3 class="course_title">
+            추천 코스 <em>Recommended Course</em>
+          </h3><!--.course_title-->
+          <div class="item_wrap">
+            <article class="course_item c1">
+              <div class="item_title">
+                <a href="./index_sub2-1.html">청계산<small>(616m)</small></a>
+              </div>
+              <div class="item_desc">
+                <div class="item_text">
+                  <p>서울 양재동과 과천시, 성남시, 의왕시의 경계를 이루고 있는 청계산은 관악산 자락이 과천 시내를 에둘러 남쪽으로 뻗어 내린 산</p>
+                  <p>계단이 많지만 산행로가 잘 정비되어 있어서 오르기 쉬워요.<br>
+                    정상인 매봉보다는 매바위가 훨씬 더 경관이 멋지답니다.</p>
+                  <div class="item_text_bottom">
+                    <b>보통</b>
+                    <b>1시간 30분</b>
+                    <b>1.2km</b>
+                  </div><!--.item_text_bottom-->
+                </div><!--.item_text-->
+                <img src="./image/2_main/course_01.png" alt="청계산">
+              </div><!--.item_desc-->
+            </article>
+            <article class="course_item c2">
+              <div class="item_title">
+                <a href="./index_sub2-1.html">불암산<small>(509m)</small></p>
+              </div>
+              <div class="item_desc">
+                <div class="item_text">
+                  <p>서울특별시 노원구와 경기도 남양주시 별내면에 걸쳐 있는 산</p>
+                  <p>제4등산로인 청암능선길은 암릉 첫 도전 코스로 많이 가는 코스예요. <br>
+                    얼마 가지 않아 멋진 조망을 볼 수 있어요.<br>
+                    암릉 입문 코스로 추천!</p>
+                  <div class="item_text_bottom">
+                    <b>보통</b>
+                    <b>1시간</b>
+                    <b>1.7km</b>
+                  </div><!--.item_text_bottom-->
+                </div><!--.item_text-->
+                <img src="./image/2_main/course_02.png" alt="불암산">
+              </div><!--.item_desc-->
+            </article>
+            <article class="course_item c3">
+              <div class="item_title">                
+                <a href="./index_sub2-1.html">대야산<small>(931m)</small></a>
+                <div class="mark"><img src="./image/2_main/mark_s_bac.png" alt="블랙야크100명산마크"></div>
+              </div>
+              <div class="item_desc">
+                <div class="item_text">
+                  <p>
+                    충청북도 괴산군 청천면과 경상북도 문경시 가은읍에 걸쳐 있는 산
+                  </p>
+                  <p>
+                    여름에 가기 딱 좋은 용추계곡을 품은 산!<br>
+                    속리산 국립공원에 속하는 대야산은 맑고 시원한 계곡으로 유명해 여름이 되면 많은 산쟁이들이 찾아요.<br>대야산의 명물 하트폭포도 꼭 보고오세요!
+                  </p>
+                  <div class="item_text_bottom">
+                    <b>보통</b>
+                    <b>2시간</b>
+                    <b>4.5km</b>
+                  </div><!--.item_text_bottom-->
+                </div><!--.item_text-->
+                <img src="./image/2_main/course_03.png" alt="대야산">
+              </div><!--.item_desc-->
+            </article>
+          </div><!--.item_wrap-->
+        </div><!--.course-->
+      </div>
+    </div><!--#course-->
+    <div id="data">
+      <div class="container">
+        <div class="data">
+          <section class="box user">
+            <div class="user_top">
+              <p>8<em>회</em></p>
+              <p>36.2<em>km</em></p>
             </div>
-        </div><!--#weather-->
-        <div id="course">
-            <div class="container">
-                <div class="course">
-                    <h3 class="course_title">
-                    추천 코스 <small>Recommended Course</small>
-                    </h3><!--.course_title-->
-                    <div class="item_wrap">
-                        <article class="course_item c1"></article>
-                        <article class="course_item c2"></article>
-                        <article class="course_item c3"></article>
-                    </div><!--.item_wrap-->
-                </div><!--.course-->
+            <div class="user_bottom">
+              <div class="percent forest">
+                <img src="./image/2_main/mark_forest.png" alt="산림청인증">
+                <p>2% 달성</p>
+              </div>
+              <div class="percent bac">
+                <img src="./image/2_main/mark_bac.png" alt="블랙야크인증">
+                <p>2% 달성</p>
+              </div>
             </div>
-        </div><!--#course-->
-        <div id="ranking">
-            <div class="container">
-                <div class="ranking">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                </div><!--.ranking-->
+          </section>
+          <section class="box ranking">
+            <div class="rank">
+              <img src="./image/2_main/lank_1.png" alt="1등">
+              <p>지니</p>
+              <p>8회</p>
+              <p>51.4km</p>
             </div>
-        </div><!--#ranking-->
-    </main>
+            <div class="rank">
+              <img src="./image/2_main/lank_2.png" alt="2등">
+              <p>유민</p>
+              <p>8회</p>
+              <p>48.0km</p>
+            </div>
+            <div class="rank">
+              <img src="./image/2_main/lank_3.png" alt="3등">
+              <p>가람</p>
+              <p>6회</p>
+              <p>24.6km</p>
+            </div>
+            <span>⋮</span>
+            <div class="rank">
+              <img src="./image/2_main/lank_my.png" alt="내랭킹">
+              <p>혜진</p>
+              <p>2회</p>
+              <p>5.3km</p>
+            </div>
+          </section>
+        </div><!--.data-->
+      </div>
+    </div><!--#data-->
+  </main>
   <footer id="footer">
-        <div class="container">
-            <footer class="footer">
-                <section class="f_top">                    
-                    <div class="f_btn">
-                        <img src="./imgs/f_up_btn.png" alt="업버튼">
-                    </div><!--.f_btn-->
-                </section><!--.f_top-->
-                <section class="f_bottom">
-                    <article class="f_bottom_L">
-                        <ul class="f_info">
-                            <li>대표 <br> 김혜진</li>
-                            <li>사업자번호 <br> 2025-08-20</li>
-                            <li>통신판매신고 <br> 제2025-서울 -0820호</li>
-                            <li>대표전화 <br> 02-123-4567</li>
-                        </ul>
-                    </article><!--.f_info-->
-                    <article class="f_bottom_R">
-                        <div class="f_link">
-                            <a href="#"><span>개인정보처리방침</span></a>
-                            <a href="#">이용약관</a>
-                        </div><!--.f_link-->
-                        <div class="f_copy">
-                            <em>Copyright ⓒ Peaklog All Rights Reserved.</em></div><!--.f_copy--> 
-                    </article>
-                                       
-                </section><!--.f_bottom-->                
-            </footer><!--.footer-->
-        </div>
+    <div class="container">
+      <footer class="footer">
+        <section class="f_top">
+          <div class="f_btn">
+            <img src="./image/4_footer/upbtn.png" alt="업버튼">
+          </div><!--.f_btn-->
+        </section><!--.f_top-->
+        <section class="f_bottom">
+          <article class="f_bottom_L">
+            <ul class="f_info">
+              <li>대표 <br> 김혜진</li>
+              <li>사업자번호 <br> 2025-08-20</li>
+              <li>통신판매신고 <br> 제2025-서울 -0820호</li>
+              <li>대표전화 <br> 02-123-4567</li>
+            </ul>
+          </article><!--.f_info-->
+          <article class="f_bottom_R">
+            <div class="f_link">
+              <a href="#"><span>개인정보처리방침</span></a>
+              <a href="#">이용약관</a>
+            </div><!--.f_link-->
+            <div class="f_copy">
+              <em>Copyright ⓒ Peaklog All Rights Reserved.</em>
+            </div><!--.f_copy-->
+          </article>
+
+        </section><!--.f_bottom-->
+      </footer><!--.footer-->
+    </div>
   </footer><!--#footer-->
 
-
-<!-- 스크립트 -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        class SwiperBanner {
-            constructor() {
-                this.currentSlide = 0;
-                this.totalSlides = 3;
-                this.isAnimating = false;
-                this.autoPlayInterval = null;
-                this.autoPlayDelay = 5000; // 5초
-                this.progressBar = null;
-                
-                this.slides = document.querySelectorAll('.swiper_slide');
-                this.prevBtn = document.querySelector('.perv_btn');
-                this.nextBtn = document.querySelector('.next_btn');
-                this.progressBars = document.querySelectorAll('.progress_bar .bar');
-                
-                this.init();
-            }
-            
-            init() {
-                // 이벤트 리스너 등록
-                this.prevBtn.addEventListener('click', () => this.prevSlide());
-                this.nextBtn.addEventListener('click', () => this.nextSlide());
-                
-                // 마우스 호버 시 자동 재생 일시정지
-                const banner = document.getElementById('banner');
-                banner.addEventListener('mouseenter', () => this.pauseProgress());
-                banner.addEventListener('mouseleave', () => this.resumeProgress());
-                
-                // 자동 재생 시작
-                this.startAutoPlay();
-                
-                // 초기 슬라이드 설정
-                this.updateSlide();
-            }
-            
-            handleSwipe() {
-                const swipeThreshold = 50;
-                const diff = touchStartX - touchEndX;
-                
-                if (Math.abs(diff) > swipeThreshold) {
-                    if (diff > 0) {
-                        this.nextSlide(); // 왼쪽으로 스와이프 - 다음 슬라이드
-                    } else {
-                        this.prevSlide(); // 오른쪽으로 스와이프 - 이전 슬라이드
-                    }
-                }
-            }
-            
-            prevSlide() {
-                if (this.isAnimating) return;
-                
-                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
-                this.updateSlide();
-                this.restartAutoPlay();
-            }
-            
-            nextSlide() {
-                if (this.isAnimating) return;
-                
-                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
-                this.updateSlide();
-                this.restartAutoPlay();
-            }
-            
-            updateSlide() {
-                this.isAnimating = true;
-                
-                // 모든 슬라이드에서 active 클래스 제거
-                this.slides.forEach((slide, index) => {
-                    slide.classList.remove('active', 'prev');
-                    
-                    if (index === this.currentSlide) {
-                        slide.classList.add('active');
-                    } else if (index < this.currentSlide) {
-                        slide.classList.add('prev');
-                    }
-                });
-                
-                // 페이지 번호 업데이트
-                const pageNumbers = document.querySelectorAll('.progress_page .num');
-                pageNumbers.forEach(num => {
-                    num.textContent = String(this.currentSlide + 1).padStart(2, '0');
-                });
-                
-                // 애니메이션 완료 후 플래그 리셋
-                setTimeout(() => {
-                    this.isAnimating = false;
-                }, 800);
-            }
-            
-            startAutoPlay() {
-                this.startProgress();
-                this.autoPlayInterval = setInterval(() => {
-                    this.nextSlide();
-                }, this.autoPlayDelay);
-            }
-            
-            stopAutoPlay() {
-                this.stopProgress();
-                if (this.autoPlayInterval) {
-                    clearInterval(this.autoPlayInterval);
-                    this.autoPlayInterval = null;
-                }
-            }
-            
-            restartAutoPlay() {
-                this.stopAutoPlay();
-                this.startAutoPlay();
-            }
-            
-            startProgress() {
-                // 현재 활성 슬라이드의 프로그레스 바 찾기
-                const activeSlide = document.querySelector('.swiper_slide.active');
-                if (activeSlide) {
-                    const progressBar = activeSlide.querySelector('.progress_bar .bar');
-                    if (progressBar) {
-                        progressBar.style.width = '0%';
-                        progressBar.classList.remove('animating');
-                        // 다음 프레임에서 애니메이션 시작 (reflow 강제)
-                        requestAnimationFrame(() => {
-                            progressBar.classList.add('animating');
-                        });
-                    }
-                }
-            }
-            
-            stopProgress() {
-                // 모든 프로그레스 바 애니메이션 정지
-                this.progressBars.forEach(bar => {
-                    bar.classList.remove('animating');
-                    const computedStyle = window.getComputedStyle(bar);
-                    const currentWidth = computedStyle.width;
-                    bar.style.width = currentWidth; // 현재 위치에서 정지
-                });
-            }
-            
-            pauseProgress() {
-                // CSS 애니메이션 일시정지
-                this.progressBars.forEach(bar => {
-                    if (bar.classList.contains('animating')) {
-                        bar.style.animationPlayState = 'paused';
-                    }
-                });
-            }
-            
-            resumeProgress() {
-                // CSS 애니메이션 재개
-                this.progressBars.forEach(bar => {
-                    if (bar.classList.contains('animating')) {
-                        bar.style.animationPlayState = 'running';
-                    }
-                });
-            }
-        }
-        
-        // 페이지 로드 완료 후 초기화
-        document.addEventListener('DOMContentLoaded', () => {
-            window.swiperBannerInstance = new SwiperBanner();
-        });
-        
-        // 페이지 가시성 변경 시 자동 재생 제어
-        document.addEventListener('visibilitychange', () => {
-            const bannerInstance = window.swiperBannerInstance;
-            if (document.hidden) {
-                if (bannerInstance) bannerInstance.stopAutoPlay();
-            } else {
-                if (bannerInstance) bannerInstance.startAutoPlay();
-            }
-        });
-    </script>
 </body>
+
 </html>
