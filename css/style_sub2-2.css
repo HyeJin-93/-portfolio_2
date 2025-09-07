@@ -1,36 +1,5 @@
 @charset "UTF-8";
 
-/* 리셋 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {display: block;}
-
-li {list-style: none;}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-
-/* 전체 설정 */
-html {
-  font-size: 10px;
-  font-family: 'Pretendard';
-}
-
-body {padding-top: 150px;}
-
-.container {
-  width: 1200px;
-  height: inherit;
-  margin: 0 auto;  
-}
-
 /* 헤더 영역 */
 #header {
   width: 100%;

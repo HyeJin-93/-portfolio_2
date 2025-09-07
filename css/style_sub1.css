@@ -1,38 +1,5 @@
 @charset "UTF-8";
 
-/* 리셋 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {display: block;}
-
-li {list-style: none;}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-
-/* 전체 설정 */
-html {
-  font-size: 10px;
-  font-family: 'Pretendard';
-}
-
-body {
-  padding-top: 170px;
-}
-
-.container {
-  width: 1200px;
-  height: inherit;
-  margin: 0 auto;  
-}
-
 /* 헤더 영역 */
 #header {
   width: 100%;
@@ -104,22 +71,51 @@ body {
 }
 .new .title em{}
 .new .accordion{
-  height: 240px;
+  height: 300px;
   background-color: #F6F6F6;
   padding: 30px;
   margin-top: 30px;
-  display: flex;  
+  display: flex;
+  flex-wrap: wrap;
 }
 .new .accordion input{
-  width: 45px;
-  height: 20px;
+  width: 365px;
+  height: 35px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 0 5px;
+  border: 0.5px solid #444548;
+  border-radius: 3px;
+  background-color: #fff;
+  font-family: 'Pretendard';    
 }
+.new .accordion input:nth-of-type(3){
+  padding-top: 5px;
+}
+
 .new .accordion input:nth-of-type(7){
-  width: 1140px;  
+  width: 1125px;
+  height: 60px;  
+  margin-right: 0px;
 }
 .new .accordion input:nth-of-type(8){
-  width: 40px;
+  width: 60px;
+  margin-right: 0px;
+  margin: 0 auto;
+  background-color: #204637;
+  color: #fff;
 }
+
+.new .accordion span{
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;  
+  width: 365px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
 
 .new .submitbtn{}
 

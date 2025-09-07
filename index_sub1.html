@@ -8,6 +8,7 @@
 
   <link rel="icon" href="./image/favicon.png">
   <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style_sub1.css">
 
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
@@ -38,11 +39,15 @@
           <h2 class="title openbtn"> 새 기록 <em>New Log</em> </h2>
           <form class="accordion">
             <input type="text" name="name" placeholder="산 이름">
-            <input type="deta" name="deta" placeholder="날짜">
-            <input type="file" name="file" placeholder="인증 사진">
-            <input type="time" name="start_time" placeholder="출발 시간">
-            <input type="time" name="peak_time" placeholder="완등 시간">
-            <input type="time" name="end_time" placeholder="하산 시간">
+            <input type="date" name="date">
+            <input type="file" name="file">
+            <span>출발</span>
+            <span>정상</span>
+            <span>완료</span>
+            <input type="time" name="start_time">            
+            <input type="time" name="peak_time">          
+            <input type="time" name="end_time">
+            <span>코멘트</span>
             <input type="text" name="record" placeholder="체감 난이도, 루트, 기타 의견 등을 적어주세요.">
             <input class="submitbtn" type="submit" value="기록하기" >
           </form>          
