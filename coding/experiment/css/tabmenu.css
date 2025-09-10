@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+#challenge{}
+.challenge{}
+
+.challenge .tabmenu{
+  margin-top: 30px;
+  display: flex;
+}
+.challenge .tabmenu li{
+  width: 250px;
+  height: 50px;
+  text-align: center;  
+}
+.challenge .tabmenu li a{
+  font-size: 4.8rem;
+  font-weight: 500;  
+  color: #ccc;  
+}
+.challenge .tabmenu li:hover a, .challenge .tabmenu li.clicked a{  
+  font-weight: 700;
+  color: #3C4C3D;
+  border-bottom: 3px solid #3C4C3D;
+}
+
+.challenge .tabcont{
+  margin-top: 30px;
+  display: none;
+}
+.challenge .tabcont.active{
+  display: block;
+  display: flex;
+}
+
+.challenge .tabcont .tabcont_left{width: 50%;}
+.challenge .tabcont .tabcont_left .map{}
+.challenge .tabcont .tabcont_left .map .district{
+  fill: #ccc;
+  fill-opacity: 1;
+  stroke: #333;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+}
+.challenge .tabcont .tabcont_left .map .district:hover, 
+.challenge .tabcont .tabcont_left .map .district.clicked{
+  fill: #81B383;
+}
+.challenge .tabcont .tabcont_left .map text{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.challenge .tabcont .tabcont_right{
+  padding: 15px;
+  width: 50%;
+}
+.challenge .tabcont .tabcont_right .list{
+  display: none;
+}
+.challenge .tabcont .tabcont_right .list.on{
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.challenge .tabcont .tabcont_right .list .list_title{
+  font-size: 4rem;
+  font-weight: 500;
+  color: #3C4C3D;
+  margin-bottom: 30px;
+  width: 100%;
+  display: inline-block;
+}
+.challenge .tabcont .tabcont_right .list li{
+  width: 160px;
+  height: 50px;
+  border: 1px solid #D9D9D9;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #333;
+  text-align: center;  
+  line-height: 1.8;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+}
+.challenge .tabcont .tabcont_right .list li:hover{
+  border: 1px solid #81B383;
+}
+.challenge .tabcont .tabcont_right .list li.complete{
+  background-image: linear-gradient(to left, #E0F0E1, #F2F7F3);
+}
+.challenge .tabcont .tabcont_right .list p{
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #D9D9D9;
+  cursor: default;
+}

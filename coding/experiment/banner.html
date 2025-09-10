@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스와이퍼</title>
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/banner.css">
+
+</head>
+<body>
+
+  <div id="swiper">
+    <div class="container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../image/2_main/slide_1.png" alt="슬라이드이미지1">  
+          </div>
+          <div class="swiper-slide">
+            <img src="../image/2_main/slide_2.png" alt="슬라이드이미지2">
+          </div>
+          <div class="swiper-slide">
+            <img src="../image/2_main/slide_3.png" alt="슬라이드이미지3">  
+          </div>
+        </div>
+        
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+          <svg width="400" height="210">
+            <line x1="0" y1="0" x2="150" y2="0"></line>
+          </svg>
+          <span></span>
+        </div>
+        <div class="swiper-button">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>          
+        </div>
+      </div><!--.mySwiper-->
+    </div>
+  </div>
+
+
+<!--스크립트-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        // clickable: true,
+        type: "fraction",
+
+        // 기존 #text("/") 삭제
+        renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '">0</span><span class="' + totalClass + '"></span>';        
+        },
+
+        // 슬라이드 번호가 10보다 작으면 앞에 '0'을 붙여서 두 자리 숫자로 표시 
+        formatFractionCurrent: function (number) {return number < 10 ? '0' + number : number;},
+        formatFractionTotal: function (number) {return number < 10 ? '0' + number : number;}    
+      },
+        
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+  </script>  
+</body>
+</html>
