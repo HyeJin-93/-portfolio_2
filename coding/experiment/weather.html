@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날씨 AIP</title>
+
+  <link rel="stylesheet" href="./css/weather.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <section class="section">
+      <h2 class="title">날씨예보</h2>
+      <div class="card large">
+          <ul class="list" id="forecastList"></ul>
+      </div>
+  </section>
+
+
+<!--스크립트-->
+  <script>
+  //날씨
+    const apiKey = '4c5c745db53820ef942b9ef654112321'; // OpenWeatherMap API 키
+    const city = 'Seoul';
+    const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=37.541106633329136&lon=126.84606054945846&mode:html&lang=kr&units=metric&appid=4c5c745db53820ef942b9ef654112321`;
+    //OpenWeatherMap 에서 구하는 리스트 url
+    //forecast? : 5일간의 날씨 예보
+    // lat=37.541106633329136 : 지역 위도
+    // &lon=126.84606054945846 : 지역 경도
+    // &mode:html : 응답 포맷을 html로 설정
+    // &lang=kr : 응답데이터 언어를 한국어로 설정
+    // &units=metric : ℃ 온도로 계산 및 표기
+    // &appid=4c5c745db53820ef942b9ef654112321 : OpenWeatherMap API 키
+
+    $(document).ready(function () {
+      //OpenWeatherMap에 GET 요청 보내기
+      $.getJSON(apiUrl, function (data) {
+        //리스트(제공되는 데이터)에서 8개 단위로 데이터를 선택해서 보여줌
+        //왜? OpenWeatherMap API는 5일간의 날씨 데이터를 3시간 간격으로 총 40개의 항목 제공
+        // → 이를 5개로 줄이려면, 8번째마다 데이터를 선택해야 함
+        const filteredData = data.list.filter((_, index) => index % 8 === 7);
+
+        filteredData.forEach((forecast, index) => {
+          const { main: { temp_max }, weather, dt_txt } = forecast;
+          //temp_max : 최고 기온, weather : 날씨 관련 정보 배열, dt_txt: 날짜 및 시간
+          const [{ icon, description }] = weather;
+          //날씨 관련 정보 배열에서 첫 번째 요소를 추출 후 매칭되는 아이콘과 설명을 가져옴
+          const date = new Date(dt_txt);
+          //날짜 및 요일 정보
+
+          const listItem = `
+            <li class="item">
+              <div class="wrapper">
+                <img
+                  src="http://openweathermap.org/img/wn/${icon}.png"
+                  width="36"
+                  height="36"
+                  alt="${description}"
+                  class="img"
+                  title="${description}"
+                />
+                <span class="span">
+                  <p class="temp">${Math.round(temp_max)}°</p>
+                </span>
+              </div>
+              <p class="label">${monthNames[date.getUTCMonth()]} ${date.getDate()}일</p>
+              <p class="label">${weekDayNames[date.getUTCDay()]}</p>
+            </li>
+          `;
+
+          $('#forecastList').append(listItem);
+        });
+      }).fail(function () {
+        alert('날씨 정보를 가져오는 데 실패했습니다. API 키와 도시 이름을 확인하세요.');
+      });
+    });
+
+    const monthNames = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
+    const weekDayNames = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+  </script>
+
+</body>
+</html>

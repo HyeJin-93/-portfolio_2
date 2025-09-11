@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+.section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  /* 중앙 정렬 */
+  overflow-x: auto;
+  /* 수평 스크롤 가능 */
+  padding: 10px;
+}
+
+.list {
+  display: flex;
+  /* Flexbox를 사용하여 수평 배열 */
+  list-style: none;
+  /* 기본 리스트 스타일 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  /* 항목 간 간격 */
+  padding: 10px;
+  text-align: center;
+  /* 텍스트 중앙 정렬 */
+  flex: 0 0 auto;
+  /* 항목이 자동으로 크기를 조정하도록 설정 */
+  width: 80px;
+  /* 항목의 고정 너비 */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  /* 세로 방향으로 정렬 */
+  align-items: center;
+  /* 중앙 정렬 */
+}
+
+.img {
+  margin-bottom: 5px;
+  /* 이미지와 온도 간 간격 */
+}
+
+.temp {
+  font-size: 18px;
+  font-weight: bold;
+  /* 온도 강조 */
+}
+
+.label {
+  font-size: 14px;
+  color: #555;
+  /* 라벨 색상 */
+}

@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./css/style_main.css">  
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -70,17 +72,19 @@
         </div>
       </div><!--.mySwiper--> 
     </div> 
-</div>
+  </div>
 
   <div id="weather">
     <div class="container">
       <div class="weather">
-
-      </div><!--.weather-->
+        <h2 class="title"><small>서울특별시</small><br>화곡동</h2>
+        <div class="card large">
+          <ul class="list" id="forecastList"></ul>
+        </div>
+      </div>
     </div>
-  </div><!--#weather-->
-  
-  
+  </div>
+
   <div id="course">
     <div class="container">
       <div class="course">
@@ -210,9 +214,14 @@
     <div class="container">
       <footer class="footer">
         <section class="f_top">
-          <div class="f_btn">
+          <button type="button" onclick="window.scrollTo(0,0);">
+            <span class="text-hidden">상단으로</span>
+            <i class="fa-regular fa-circle-up"></i>            
+          </button>
+          <!-- <div class="f_btn">
             <img src="./image/4_footer/upbtn.png" alt="업버튼">
-          </div><!--.f_btn-->
+          </div> -->
+          <!--.f_btn-->
         </section><!--.f_top-->
         <section class="f_bottom">
           <article class="f_bottom_L">
@@ -286,6 +295,77 @@
         }
       }
     });
+
+
+//날씨
+    const apiKey = '4c5c745db53820ef942b9ef654112321'; // OpenWeatherMap API 키
+    const city = 'Seoul';
+    const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=37.541106633329136&lon=126.84606054945846&mode:html&lang=kr&units=metric&appid=4c5c745db53820ef942b9ef654112321`;
+    //OpenWeatherMap 에서 구하는 리스트 url
+    //forecast? : 5일간의 날씨 예보
+    // lat=37.541106633329136 : 지역 위도
+    // &lon=126.84606054945846 : 지역 경도
+    // &mode:html : 응답 포맷을 html로 설정
+    // &lang=kr : 응답데이터 언어를 한국어로 설정
+    // &units=metric : ℃ 온도로 계산 및 표기
+    // &appid=4c5c745db53820ef942b9ef654112321 : OpenWeatherMap API 키
+
+    $(document).ready(function () {      
+      $.getJSON(apiUrl, function (data) {
+      //OpenWeatherMap에 GET 요청 보내기
+        const filteredData = data.list.filter((_, index) => index % 8 === 7);
+        //리스트(제공되는 데이터)에서 8개 단위로 데이터를 선택해서 보여줌
+        //왜? OpenWeatherMap API는 5일간의 날씨 데이터를 3시간 간격으로 총 40개의 항목 제공
+        // → 이를 5개로 줄이려면, 8번째마다 데이터를 선택해야 함
+
+        filteredData.forEach((forecast, index) => {
+          const { main: { temp_min, temp_max }, weather, dt_txt } = forecast;          
+          const [{ icon, description }] = weather;
+          //날씨 관련 정보 배열(=weather)에서 첫 번째 요소를 추출 후 매칭되는 아이콘과 설명을 가져옴
+          const date = new Date(dt_txt);
+          //날짜 및 요일 정보
+          const day = date.getUTCDay();
+          // 요일 값을 가져옴. 일요일=0 ~ 토요일=6
+          const dayName = weekDayNames[day]
+          //가져온 요일 값(=숫자)를 텍스트 형식으로 만들기 위함
+
+          const formattedDate = `${date.getMonth() + 1}/${date.getDate()} ${dayName.charAt(0)}`;
+          //날짜 및 요일 형식을 '9/11 목'처럼 만들기 위함
+          //charAt() 메소드: String 으로 저장된 문자열 중에서 한 글자만 선택해서 char 타입으로 변환
+
+          const dayClass = (day === 0) ? 'day-sunday' : (day === 6) ? 'day-saturday' : '';
+          // 요일에 따라 클래스 설정. 왜? 날짜의 폰트 색을 지정하려고
+
+          //↓ 날씨 정보를 표시하기 위한 HTML 리스트 항목 생성.
+          //왜? 내가 제시하고자 하는 순서에 맞춰 새로 작성(기존 리스트의 제시 순서와 다름)
+          const listItem = `          
+            <li class="item">
+                <div class="date ${dayClass}">${formattedDate}</div>
+                <div class="icon">
+                    <img
+                        src="http://openweathermap.org/img/wn/${icon}.png"
+                        width="70"
+                        height="70"
+                        alt="${description}"
+                        class="img"
+                        title="${description}"
+                    />
+                </div>
+                <div class="temp">${Math.round(temp_min)}℃ / ${Math.round(temp_max)}℃</div> 
+            </li>
+          `;
+
+          $('#forecastList').append(listItem);
+        });
+      }).fail(function () {
+        alert('날씨 정보를 가져오는 데 실패했습니다. API 키와 도시 이름을 확인하세요.');
+      });
+    });
+
+    const monthNames = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
+    const weekDayNames = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+
+
 
   //헤더 휠
   const header = document.querySelector("#header");

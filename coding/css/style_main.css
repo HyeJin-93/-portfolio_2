@@ -36,14 +36,15 @@ body {
 
 .header .header_nav .menu li {
   display: inline-block;
-  width: 120px;
-  height: 40px;
+  width: 12rem;
+  height: 4rem;
   text-align: center;
   line-height: 40px;
 }
 
 .header .header_nav .menu li:last-of-type {
   border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .header .header_nav .menu li a {
@@ -207,10 +208,70 @@ body {
 
 /* weather 영역 */
 #weather {
-  height: 200px;
-  padding: 20px;
-  background-color: antiquewhite;
+  height: 220px;
+  padding: 20px;  
 }
+
+.weather{
+  display: flex;
+}
+
+.weather .title {
+  display: inline-block;
+  width: 18rem;
+  font-size: 4.6rem;
+  margin: 35px 0;
+  text-align: center;
+}
+.weather .title small{
+  display: inline-block;
+  width: 18rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.weather .card {
+  display: flex;
+  justify-content: center;    
+  padding: 10px;
+}
+
+.weather .card .list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;  
+}
+
+.weather .card .list .item {
+  width: 18.5rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  margin: 0 10px;  
+  padding: 20px;
+  text-align: center;
+  flex: 0 0 auto;  /* 항목이 자동으로 크기를 조정하도록 설정 */  
+}
+
+.weather .card .list .item .date {
+  font-size: 2rem;
+  margin-bottom: 5px;  
+}
+
+.weather .card .list .item .icon {
+  display: inline-block;
+  /* margin: 10px auto; */
+}
+
+.weather .card .list .item .temp {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+.day-sunday {color: red;}
+.day-saturday {color: blue;}
+
+
 
 /* course 영역 */
 #course {
