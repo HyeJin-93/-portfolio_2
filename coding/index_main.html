@@ -180,26 +180,26 @@
           </div>
         </section>
         <section class="box ranking">
-          <div class="rank">
+          <div class="rank r1">
             <img src="./image/2_main/lank_1.png" alt="1등">
-            <p>지니</p>
+            <p>유민</p>
             <p>8회</p>
             <p>51.4km</p>
           </div>
-          <div class="rank">
+          <div class="rank r2">
             <img src="./image/2_main/lank_2.png" alt="2등">
-            <p>유민</p>
+            <p>기원</p>
             <p>8회</p>
             <p>48.0km</p>
           </div>
-          <div class="rank">
+          <div class="rank r3">
             <img src="./image/2_main/lank_3.png" alt="3등">
             <p>가람</p>
             <p>6회</p>
             <p>24.6km</p>
           </div>
-          <span>⋮</span>
-          <div class="rank">
+          <span class="r4">⋮</span>
+          <div class="rank r5">
             <img src="./image/2_main/lank_my.png" alt="내랭킹">
             <p>혜진</p>
             <p>2회</p>
@@ -214,14 +214,9 @@
     <div class="container">
       <footer class="footer">
         <section class="f_top">
-          <button type="button" onclick="window.scrollTo(0,0);">
-            <span class="text-hidden">상단으로</span>
-            <i class="fa-regular fa-circle-up"></i>            
+          <button type="button" class="totop_btn">
+            <img src="./image/4_footer/upbtn.png" alt="페이지최상단이동버튼">
           </button>
-          <!-- <div class="f_btn">
-            <img src="./image/4_footer/upbtn.png" alt="업버튼">
-          </div> -->
-          <!--.f_btn-->
         </section><!--.f_top-->
         <section class="f_bottom">
           <article class="f_bottom_L">
@@ -253,8 +248,21 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
+  //헤더 휠
+  const header = document.querySelector("#header");
+      
+    window.addEventListener("scroll", function(){
+      if(window.scrollY>0){
+        header.classList.add("on")
+      }
+      else{
+        header.classList.remove("on")
+      }
+      // console.log(window.scrollY);
+    });
 
-    //스와이퍼
+
+  //스와이퍼
     const progressLine = document.querySelector(".autoplay-progress svg");
     const progressContent = document.querySelector(".autoplay-progress span");
     
@@ -297,7 +305,7 @@
     });
 
 
-//날씨
+  //날씨
     const apiKey = '4c5c745db53820ef942b9ef654112321'; // OpenWeatherMap API 키
     const city = 'Seoul';
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=37.541106633329136&lon=126.84606054945846&mode:html&lang=kr&units=metric&appid=4c5c745db53820ef942b9ef654112321`;
@@ -364,22 +372,14 @@
 
     const monthNames = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
     const weekDayNames = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
-
-
-
-  //헤더 휠
-  const header = document.querySelector("#header");
-      
-    window.addEventListener("scroll", function(){
-      if(window.scrollY>0){
-        header.classList.add("on")
-      }
-      else{
-        header.classList.remove("on")
-      }
-      // console.log(window.scrollY);
-    });
     
+
+  //스크롤업버튼
+  $(document).ready(function() {
+    $('.totop_btn').on('click', function() {
+      $('html').animate({ scrollTop: 0 }, 'smooth');
+    });
+});
   </script>  
 </body>
 
