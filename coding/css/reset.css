@@ -11,9 +11,9 @@ img {display: block;}
 
 li {list-style: none;}
 
-a {
+a,span,small,p,em {
   text-decoration: none;
-  color: #000;
+  color: #0c0c0c;
 }
 
 
