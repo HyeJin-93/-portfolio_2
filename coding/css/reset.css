@@ -11,24 +11,7 @@ img {display: block;}
 
 li {list-style: none;}
 
-a,span,small,p,em {
+a {
   text-decoration: none;
-  color: #0c0c0c;
-}
-
-
-/* 전체 설정 */
-html {
-  font-size: 10px;
-  font-family: 'Pretendard_400';
-}
-
-body {
-  padding-top: 170px;
-}
-
-.container {
-  width: 1200px;
-  height: inherit;
-  margin: 0 auto;  
+  color: #000;
 }

@@ -1,10 +1,22 @@
 :root{
-  --black: #0c0c0c;
+  /* color */
+  --black: #0c0c0c;  /*  #333333 도 합치기*/
   --white: #FFFFFF;
-  --gray: #919191;
-  --color1: #919191;
-  --color1: #919191;
-  --color1: #919191;
-  --color1: #919191;
-  --color1: #919191;
+  --gray1: #919191;
+  --gray2: #D9D9D9;
+  --red: #BC0000;
+  --blue: #0027A7;
+  
+  --maincolor: #3C4C3D;
+  --subcolor1: #014023;
+  --subcolor2: #204637;
+  
+  --bgcolor1: #F6F6F6;
+  --bgcolor2: #FDFAEF;
+
+  --shadow: rgba(0, 0, 0, 0.25);
+
+  --pointgreen1: #6EB87B;
+  --pointgreen2: #E0F0E1;
+  --pointgreen3: #F2F7F3;
 }

@@ -1,11 +1,26 @@
 @charset "UTF-8";
 
-body { padding-top: 0px; }
+/* 전체 설정 */
+html {
+  font-size: 10px;
+  font-family: 'Pretendard_400';
+}
+
+body {
+  padding-top: 0px;
+  /* padding-top: 170px; */
+}
+
+.container {
+  width: 1200px;
+  height: inherit;
+  margin: 0 auto;  
+}
 
 /* 헤더 영역 */
 #header {
   width: 100%;
-  height: 140px;
+  height: 14.5rem;  
   position: fixed;
   top: 0;
   z-index: 99;
@@ -19,39 +34,41 @@ body { padding-top: 0px; }
 }
 
 .header .logo {
-  width: 155px;
-  height: 130px;
+  width: 15.5rem;
+  height: 13rem;
+  padding: 2rem 0 1rem 0;
   background-image: url(../image/1_header/logo_W.png);
 }
 
 .header .header_nav {
-  padding-top: 70px;
+  padding: 7rem 0 0 1rem;
 }
 
 .header .header_nav .menu { display: flex; }
 
-.header .header_nav .menu li {
-  display: inline-block;
-  width: 12rem;
-  height: 4rem;
-  text-align: center;
-  line-height: 40px;
-}
-
 .header .header_nav .menu li:last-of-type {
-  border: 1px solid #fff;
+  border: 1px solid #FFFFFF;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .header .header_nav .menu li a {
+  display: inline-block;
+  width: 12rem;
+  height: 4rem;
   font-size: 2rem;
+  line-height: 40px;
   font-weight: 400;
-  color: #fff;
+  text-align: center;
+  color: #FFFFFF;
+  transition: transform 0.3s ease-in-out;
 }
+
+.header .header_nav .menu li a:hover { transform: scale(1.1); }
 
 /* 스크롤 시 헤더 */
 #header.on {
-  background-color: #FFF;
+  /* height: 14.5rem; */
+  background-color: #FFFFFF;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -95,12 +112,13 @@ body { padding-top: 0px; }
   object-position: center
 }
 .swiper-slide .slide_text {
+  width: 100%;
+  padding-left: 20%;
   position: absolute;
-  top: 18rem;
-  left: 38rem;
-  color: white;
-  z-index: 10;
-  padding: 10px;
+  top: 18rem;  
+  left: 0;
+  color: #FFFFFF;
+  z-index: 10;  
   transform: translateY(50px);
 }
 
@@ -109,8 +127,7 @@ body { padding-top: 0px; }
   font-weight: 700;
   font-size: 6rem;
   margin-bottom: 20px;
-  animation: slideInUp 1.2s ease-out 2.8s both;
-  /* left: 10%; */
+  animation: slideInUp 1.2s ease-out 2.8s both;  
 }
 
 .swiper-slide .slide_text .sub {
@@ -165,7 +182,7 @@ body { padding-top: 0px; }
   font-family: "Lato";
   font-size: 1.4rem;
   font-weight: 400;
-  color: #fff;
+  color: #FFFFFF;
   left: 20%;
 }
 
@@ -218,6 +235,7 @@ body { padding-top: 0px; }
   font-size: 4.6rem;
   margin: 35px 0;
   text-align: center;
+  color: #204637;
 }
 .weather .title small{
   display: inline-block;
@@ -240,9 +258,9 @@ body { padding-top: 0px; }
 
 .weather .card .list .item {
   width: 18.5rem;
-  background-color: #fff;
+  background-color: #FFFFFF;
   border-radius: 5px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   margin: 0 10px;  
   padding: 20px;
   text-align: center;
@@ -264,15 +282,15 @@ body { padding-top: 0px; }
   font-weight: 600;
 }
 
-.day-sunday {color: red;}
-.day-saturday {color: blue;}
+.day-sunday {color: #BC0000;}
+.day-saturday {color: #0027A7}
 
 
 
 /* course 영역 */
 #course {
   height: 1830px;
-  background-color: #005503;
+  background-color: #014023;
 }
 
 .course {}
@@ -280,7 +298,7 @@ body { padding-top: 0px; }
 .course .course_title {
   font-size: 4.8rem;
   font-weight: 700;
-  color: #fff;
+  color: #FFFFFF;
   text-align: left;
   padding: 30px 0;
   position: sticky;
@@ -301,7 +319,7 @@ body { padding-top: 0px; }
 .course .item_wrap .course_item {
   width: 100%;
   background-color: #FDFAEF;
-  border: 1px solid #005503;
+  border: 1px solid #014023;
   border-radius: 25px 25px 0 0;
   display: flex;
   align-items: center;
@@ -390,7 +408,7 @@ body { padding-top: 0px; }
 .course .item_wrap .course_item .item_desc .item_text .item_text_bottom {
   padding-top: 80px;
   font-size: 5rem;
-  color: #192922;
+  color: #204637;
 }
 
 .course .item_wrap .course_item .item_desc .item_text .item_text_bottom b {
@@ -438,7 +456,7 @@ body { padding-top: 0px; }
   font-size: 4rem;
 }
 
-.data .user .user_top p:last-child { border-left: 3px solid #005503; }
+.data .user .user_top p:last-child { border-left: 3px solid #014023; }
 
 .data .user .user_bottom {
   height: 20%;
@@ -459,7 +477,7 @@ body { padding-top: 0px; }
 
 .data .ranking .rank {
   width: 100%;
-  background-color: #fff;
+  background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 1.5px 2.5px 5px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -512,7 +530,7 @@ body { padding-top: 0px; }
 }
 
 .footer .f_bottom {
-  height: 20vh;
+  height: 15vh;
   display: flex;
   font-family: 'Pretendard';
   font-weight: 300;
@@ -535,7 +553,7 @@ body { padding-top: 0px; }
   line-height: 25px;
   text-align: right;
 }
-.footer .f_bottom .f_bottom_R .f_link a { color: #FFF; }
+.footer .f_bottom .f_bottom_R .f_link a { color: #FFFFFF; }
 .footer .f_bottom .f_bottom_R .f_link a:nth-of-type(1) {padding-right: 1rem;}
 .footer .f_bottom .f_bottom_R .f_link a span {
   font-weight: 500;

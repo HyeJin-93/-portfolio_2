@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+@media (max-width:1800px) {
+
+  /* 스와이프 영역 */  
+  .swiper-button {
+    left: 28.5%;
+  }
+}
+
+@media (max-width:1700px) {
+  /* 스와이프 영역 */
+  .swiper-slide .slide_text {
+    padding-left: 18%;
+  }
+  .swiper-button {
+    left: 26.5%;
+  }
+  .swiper-pagination {
+    left: 18%;
+  }
+  .autoplay-progress {
+    left: 19.2%;
+  }
+}
+
+@media (max-width:1600px) {
+
+  /* 스와이프 영역 */
+  .swiper-slide .slide_text {
+    padding-left: 16%;
+  }
+  .swiper-button {
+    left: 25.5%;
+  }
+  .swiper-pagination {
+    left: 16.5%;
+  }
+  .autoplay-progress {
+    left: 17.8%;
+  }
+}
+
+@media (max-width:1500px) {
+
+  /* 스와이프 영역 */
+  .swiper-slide .slide_text {
+    padding-left: 14%;
+  }
+  .swiper-button {
+    left: 24.7%;
+  }
+  .swiper-pagination {
+    left: 15%;
+  }
+  .autoplay-progress {
+    left: 16.4%;
+  }
+}
+
+@media (max-width:1400px) {
+
+  /* 스와이프 영역 */
+  .swiper-slide .slide_text {
+    padding-left: 12%;
+  }
+  .swiper-button {
+    left: 22.7%;
+  }
+  .swiper-pagination {
+    left: 12.5%;
+  }
+  .autoplay-progress {
+    left: 14%;
+  }
+}
+
+@media (max-width:1300px) {
+
+  /* 스와이프 영역 */
+  .swiper-slide .slide_text {
+    padding-left: 10%;
+  }
+  .swiper-button {
+    left: 22.3%;
+  }
+  .swiper-pagination {
+    left: 11%;
+  }
+  .autoplay-progress {
+    left: 12.7%;
+  }
+}
+
+@media (max-width:1200px) {
+
+  /* 스와이프 영역 */
+  .swiper-slide .slide_text {
+    padding-left: 8%;
+  }
+  .swiper-button {
+    left: 21.5%;
+  }
+  .swiper-pagination {
+    left: 9.5%;
+  }
+  .autoplay-progress {
+    left: 12.2%;
+  }
+}
