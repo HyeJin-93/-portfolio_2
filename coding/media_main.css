@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+@media screen and (max-width:1290px) {
+  .container { width: 100%; }
+}
+
+@media screen and (max-width:1080px) {
+  /* 스와이퍼 */
+  .mySwiper2 .swiper-slide .text_wrap .title{
+    margin: 200px 0 20px 150px;
+  }
+  .mySwiper2 .swiper-slide .text_wrap .sub {
+    margin-left: 150px;
+  }
+
+  .data .user .user_top p {
+    font-size: 6rem;
+  }
+
+  .data .user .user_top p em {
+    font-size: 3rem;
+  }
+  .data .ranking .rank p {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width:1080px) {
+  
+}
+
+
+@media screen and (max-width:940px) {
+  /* 스와이퍼 */
+  .mySwiper2 .swiper-slide .text_wrap .title{
+    font-size: 4.6rem;
+    margin: 200px 0 20px 230px;
+  }
+  .mySwiper2 .swiper-slide .text_wrap .sub {
+    font-size: 2.2rem;
+    margin-left: 230px;
+  }
+
+  /* 날씨 */
+  .weather{ flex-direction: column; }
+  .weather .title {
+    display: inline-flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center;
+    width: 100%;
+    margin: 0px 0px;
+    padding: 20px 0;
+  }
+  .weather .title small{
+    padding-top: 15px;
+  }
+  .weather .card {
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  /* 헤더 */
+  #header {
+    height: 15rem;  
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  }
+  #header.on .header .roll_logo {
+    display: block;
+    padding: 0px 0 0px 0;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .header .logo .logo_link{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .logo { display: none; }
+  .header .roll_logo { 
+    display: block;
+    height: 9rem;
+    margin: 6px 0;
+  }
+    
+  .header .header_nav{ padding: 5px 0; }
+  .header .header_nav .menu li a {
+    width: 8.5rem;
+    height: 3rem;
+    line-height: 30px;
+    color: #3C4C3D;
+    transition: transform 0.3s ease-in-out;
+  }
+  .header .header_nav .menu li:last-of-type { border: 1px solid #3C4C3D; }
+
+  /* 스와이퍼 */
+  .mySwiper2 .swiper-slide .text_wrap .title {
+    margin: 170px 0 20px 0px;
+    text-align: center;
+  }
+
+  .mySwiper2 .swiper-slide .text_wrap .sub {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .mySwiper2 .swiper-slide .text_wrap .mob{
+    display: block;
+  }
+
+  /* 날씨 */
+  .weather .card {
+    width: 80%;
+    padding: 8px;
+    margin: 0 auto;
+  }
+  .weather .card .list {
+    flex-direction: column;
+  }
+
+  .weather .card .list .item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 8rem;
+    margin: 5px 0px;
+    padding: 15px;
+    text-align: center;
+    flex: unset;
+  }
+
+  .weather .card .list .item .date {
+    font-size: 2rem;
+    width: 3.5rem;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .weather .card .list .item .icon {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .weather .card .list .item .temp {
+    width: 6rem;
+    font-size: 2.0rem;
+    font-weight: 500;
+  }
+
+
+
+}
+
+@media screen and (max-width:481px) {
+
+  /* 스와이퍼 */
+  .mySwiper2 .swiper-slide .text_wrap .sub {display: none;}
+  .button { display: none; }
+
+}
+
+@media screen and (max-width:375px) {
+  .mySwiper2 .swiper-slide .text_wrap .sub {display: none;}
+
+}
+
