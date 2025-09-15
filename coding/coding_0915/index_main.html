@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peaklog</title>
+
+  <link rel="icon" href="./image/favicon.png">
+  
+  <link rel="stylesheet" href="./css/setting.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/style_main.css">
+  <link rel="stylesheet" href="./css/media_main.css">
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="row"> 
+        <div class="header">
+          <a class="logo_link" href="./index_main.html">
+            <img class="logo" src="./image/1_header/logo_W.png" alt="로고">
+            <img class="roll_logo" src="./image/1_header/logo_B.png" alt="로고">
+          </a>
+          <nav class="header_nav">
+            <ul class="menu">
+              <li><a href="./index_sub1.html">등산기록</a></li>
+              <li><a href="./index_sub2-1.html">코스검색</a></li>
+              <li><a href="./index_sub3.html">도전명산</a></li>
+              <li><a href="#">로그인</a></li>
+            </ul><!--.menu-->
+          </nav><!--.header_nav-->
+        </div><!--.header-->
+      </div><!--.row-->
+    </div><!--.container-->
+  </header><!--#header-->
+  
+
+  <div class="swiper mySwiper1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../image/2_main/slide_1.png" alt="슬라이드이미지1">
+      </div><!--.swiper-slide 1-->
+      <div class="swiper-slide">
+        <img src="../image/2_main/slide_2.png" alt="슬라이드이미지2">
+      </div><!--.swiper-slide 2-->
+      <div class="swiper-slide">
+        <img src="../image/2_main/slide_3.png" alt="슬라이드이미지3">
+      </div><!--.swiper-slide 3-->
+    </div><!--.swiper-wrapper-->
+  </div><!--.mySwiper1-->
+  <div class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="text_wrap">
+          <h3 class="title">스쳐간 바람부터 <br class="mob"> 머물던 햇살까지</h3>
+          <p class="sub">산에서의 작은 순간들이 나만의 이야기가 됩니다.</p>
+        </div><!--.text_wrap-->
+      </div><!--.swiper-slide-->
+      <div class="swiper-slide">
+        <div class="text_wrap">
+          <h3 class="title">산이 건네준 <br class="mob"> 고요 속의 이야기</h3>
+          <p class="sub">발걸음마다 스며든 자연의 목소리를 담아두세요.</p>
+        </div><!--.text_wrap-->
+      </div><!--.swiper-slide-->
+      <div class="swiper-slide">
+        <div class="text_wrap">
+          <h3 class="title">기억은 흐르지만, <br class="mob"> 기록은 머뭅니다</h3>
+          <p class="sub">흘러간 순간을 붙잡아, 내일도 다시 꺼내볼 수 있도록</p>
+        </div><!--.text_wrap-->
+      </div><!--.swiper-slide-->
+    </div><!--.swiper-wrapper-->
+    <div class="swiper-pagination"></div><!--.swiper-pagination-->
+    <div class="autoplay-progress">
+      <svg width="400" height="210">
+        <line x1="0" y1="0" x2="150" y2="0"></line>
+      </svg>
+    </div><!--.autoplay-progress-->  
+    <div class="button">
+      <div class="btn_prev"></div>
+      <div class="btn_next"></div>
+    </div><!--.swiper-button-->
+  </div><!--.mySwiper2-->
+
+  <div id="weather">  
+    <div class="container">
+      <div class="row">
+        <div class="weather">
+          <div class="title">
+            <small>서울특별시</small>
+            <br class="mob">
+            <h2>화곡동</h2>
+          </div>
+          <div class="card large">
+            <ul class="list" id="forecastList"></ul>
+          </div>
+        </div><!--.weather-->
+      </div><!--.row-->
+    </div><!--.container-->
+  </div><!--#weather-->
+
+  <div id="course">
+    <div class="container">
+      <div class="row">
+        <div class="course">
+          <h3 class="course_title">
+            추천 코스 <em>Recommended Course</em>
+          </h3><!--.course_title-->
+          <div class="item_wrap">
+            <article class="course_item c1">
+              <a class="lookbtn" href="#">
+                <img src="./image/2_main/arrow2_R.png" alt="경로보러가기">
+              </a>
+                        
+              <div class="item_title">
+                <a href="./index_sub2-1.html">청계산<small>(616m)</small></a>
+              </div><!--.item_title-->
+              <div class="item_desc">
+                <div class="item_text">
+                  <p>서울 양재동과 과천시, 성남시, 의왕시의 경계를 이루고 있는 청계산은 관악산 자락이 과천 시내를 에둘러 남쪽으로 뻗어 내린 산</p>
+                  <p>계단이 많지만 산행로가 잘 정비되어 있어서 오르기 쉬워요.<br>
+                    정상인 매봉보다는 매바위가 훨씬 더 경관이 멋지답니다.</p>
+                  <div class="item_text_bottom">
+                    <b>보통</b>
+                    <b>1시간 30분</b>
+                    <b>1.2km</b>
+                  </div><!--.item_text_bottom-->
+                </div><!--.item_text-->
+                <img src="./image/2_main/course_01.png" alt="청계산">
+                <img src="./image/2_main/course_01_m.png" alt="청계산" class="mob">
+              </div><!--.item_desc-->
+            </article><!--.course_item c1-->
+            <article class="course_item c2">
+              <a class="lookbtn" href="./index_sub2-1.html"><img src="./image/2_main/arrow2_R.png" alt="경로보러가기"></a>            
+              <div class="item_title">
+                <a href="./index_sub2-1.html">불암산<small>(509m)</small></a>
+              </div><!--.item_title-->
+              <div class="item_desc">
+                <div class="item_text">
+                  <p>서울특별시 노원구와 경기도 남양주시 별내면에 걸쳐 있는 산</p>
+                  <p>제4등산로인 청암능선길은 암릉 첫 도전 코스로 많이 가는 코스예요. <br>
+                    얼마 가지 않아 멋진 조망을 볼 수 있어요.<br>
+                    암릉 입문 코스로 추천!</p>
+                  <div class="item_text_bottom">
+                    <b>보통</b>
+                    <b>1시간</b>
+                    <b>1.7km</b>
+                  </div><!--.item_text_bottom-->
+                </div><!--.item_text-->
+                <img src="./image/2_main/course_02.png" alt="불암산">
+                <img src="./image/2_main/course_02_m.png" alt="불암산" class="mob">
+              </div><!--.item_desc-->
+            </article><!--.course_item c2-->
+            <article class="course_item c3">
+              <a class="lookbtn" href="#"><img src="./image/2_main/arrow2_R.png" alt="경로보러가기"></a>
+              <div class="item_title">                
+                <a href="./index_sub2-1.html">대야산<small>(931m)</small></a>
+                <img class="mark" src="./image/2_main/mark_s_bac.png" alt="블랙야크100명산마크">
+              </div><!--.item_title-->
+              <div class="item_desc">
+                <div class="item_text">
+                  <p>충청북도 괴산군 청천면과 경상북도 문경시 가은읍에 걸쳐 있는 산</p>
+                  <p>
+                    여름에 가기 딱 좋은 용추계곡을 품은 산!<br>
+                    속리산 국립공원에 속하는 대야산은 맑고 시원한 계곡으로 유명해 여름이 되면 많은 산쟁이들이 찾아요.<br>대야산의 명물 하트폭포도 꼭 보고오세요!
+                  </p>
+                  <div class="item_text_bottom">
+                    <b>보통</b>
+                    <b>2시간</b>
+                    <b>4.5km</b>
+                  </div><!--.item_text_bottom-->
+                </div><!--.item_text-->
+                <img src="./image/2_main/course_03.png" alt="대야산">
+                <img src="./image/2_main/course_03_m.png" alt="대야산" class="mob">
+              </div><!--.item_desc-->
+            </article><!--.course_item c3-->
+          </div><!--.item_wrap-->
+        </div><!--.course-->
+      </div><!--.row-->
+    </div><!--.container-->
+  </div><!--#course-->
+
+  <div id="data">
+    <div class="container">
+      <div class="row">
+        <div class="data">
+          <section class="box user">
+            <div class="user_top">
+              <p>8<em>회</em></p>
+              <p>36.2<em>km</em></p>
+            </div><!--.user_top-->
+            <div class="user_bottom">
+              <div class="percent forest">
+                <img src="./image/2_main/mark_forest.png" alt="산림청인증">
+                <p>2% 달성</p>
+              </div><!--.percent forest-->
+              <div class="percent bac">
+                <img src="./image/2_main/mark_bac.png" alt="블랙야크인증">
+                <p>2% 달성</p>
+              </div><!--.percent bac-->
+            </div><!--.user_bottom-->
+          </section><!--.box user-->
+          <section class="box ranking">
+            <div class="rank r1">
+                <div class="left">
+                <img src="./image/2_main/lank_1.png" alt="1등">
+                <p>유민</p>
+              </div>
+              <div class="right">
+                <p>8회</p>
+                <p>51.4km</p>
+              </div>
+            </div><!--.rank r1-->
+            <div class="rank r2">
+              <div class="left">
+                <img src="./image/2_main/lank_2.png" alt="2등">
+                <p>기원</p>
+              </div>
+              <div class="right">
+                <p>8회</p>
+                <p>48.0km</p>
+              </div>
+            </div><!--.rank r2-->
+            <div class="rank r3">
+              <div class="left">
+                <img src="./image/2_main/lank_3.png" alt="3등">
+                <p>가람</p>
+              </div>
+              <div class="right">
+                <p>6회</p>
+                <p>24.6km</p>
+              </div>
+            </div><!--.rank r3-->
+            <span class="r4">⋮</span><!--.r3-->
+            <div class="rank r5">
+              <div class="left">
+                <img src="./image/2_main/lank_my.png" alt="내랭킹">
+                <p>혜진</p>
+              </div>
+              <div class="right">
+                <p>2회</p>
+                <p>5.3km</p>
+              </div>
+            </div><!--.rank r5-->
+          </section><!--.box ranking-->
+        </div><!--.data-->
+      </div><!--.row-->
+    </div><!--.container-->
+  </div><!--#data-->  
+  
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <footer class="footer">
+          <section class="f_top">
+            <button class="totop_btn" type="button">
+              <img src="./image/4_footer/upbtn.png" alt="페이지최상단이동버튼">
+            </button><!--.totop_btn-->
+          </section><!--.f_top-->
+          <section class="f_bottom">
+            <article class="f_bottom_L">
+              <ul class="f_info">
+                <li>대표 <br class="mob"> 김혜진</li>
+                <li>사업자번호 <br class="mob"> 2025-08-20</li>
+                <li>통신판매신고 <br class="mob"> 제2025-서울 -0820호</li>
+                <li>대표전화 <br class="mob"> 02-123-4567</li>
+              </ul><!--.f_info-->
+            </article><!--.f_bottom_L-->
+            <article class="f_bottom_R">
+              <div class="f_link">
+                <a href="#"><span>개인정보처리방침</span></a>
+                <a href="#">이용약관</a>
+              </div><!--.f_link-->
+              <div class="f_copy">
+                <em>Copyright ⓒ Peaklog All Rights Reserved.</em>
+              </div><!--.f_copy-->
+            </article><!--.f_bottom_R"-->
+          </section><!--.f_bottom-->
+        </footer><!--.footer-->
+      </div><!--.row-->
+    </div><!--.container-->
+  </footer><!--#footer-->
+
+
+
+<!--스크립트-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    
+
+  <script>
+  //헤더 휠
+  const header = document.querySelector("#header");
+      
+    window.addEventListener("scroll", function(){
+      if(window.scrollY>0){
+        header.classList.add("on")
+      }
+      else{
+        header.classList.remove("on")
+      }
+      // console.log(window.scrollY);
+    });
+
+
+  //스와이퍼
+    var swiper1 = new Swiper(".mySwiper1", {
+
+      slidesPerView: 1,
+      spaceBetween: 0,
+      centeredSlides: true,
+      loop: true,
+      // loopedSlides: 3,
+      // speed: 3000,
+      observer: true,	// 추가
+      observeParents: true,	// 추가
+    });
+
+    const progressLine = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+
+    var swiper2 = new Swiper(".mySwiper2", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: 3,
+      speed: 3000,
+      observer: true,	// 추가
+      observeParents: true,	// 추가
+
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        // clickable: true,
+        type: "fraction",
+
+        // 기존 #text("/") 삭제
+        renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '">0</span><span class="' + totalClass + '"></span>';        
+        },
+
+        // 슬라이드 번호가 10보다 작으면 앞에 '0'을 붙여서 두 자리 숫자로 표시 
+        formatFractionCurrent: function (number) {return number < 10 ? '0' + number : number;},
+        formatFractionTotal: function (number) {return number < 10 ? '0' + number : number;}    
+      },
+        
+      navigation: {
+        nextEl: ".btn_next",
+        prevEl: ".btn_prev"
+      },
+
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressLine.style.setProperty("--progress", 1 - progress);          
+        }
+      }
+    });
+
+    swiper2.controller.control = swiper1;
+    swiper1.controller.control = swiper2;
+
+  //날씨
+    const apiKey = '4c5c745db53820ef942b9ef654112321'; // OpenWeatherMap API 키
+    const city = 'Seoul';
+    const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=37.541106633329136&lon=126.84606054945846&mode:html&lang=kr&units=metric&appid=4c5c745db53820ef942b9ef654112321`;
+    //OpenWeatherMap 에서 구하는 리스트 url
+    //forecast? : 5일간의 날씨 예보
+    // lat=37.541106633329136 : 지역 위도
+    // &lon=126.84606054945846 : 지역 경도
+    // &mode:html : 응답 포맷을 html로 설정
+    // &lang=kr : 응답데이터 언어를 한국어로 설정
+    // &units=metric : ℃ 온도로 계산 및 표기
+    // &appid=4c5c745db53820ef942b9ef654112321 : OpenWeatherMap API 키
+
+    $(document).ready(function () {      
+      $.getJSON(apiUrl, function (data) {
+      //OpenWeatherMap에 GET 요청 보내기
+        const filteredData = data.list.filter((_, index) => index % 8 === 7);
+        //리스트(제공되는 데이터)에서 8개 단위로 데이터를 선택해서 보여줌
+        //왜? OpenWeatherMap API는 5일간의 날씨 데이터를 3시간 간격으로 총 40개의 항목 제공
+        // → 이를 5개로 줄이려면, 8번째마다 데이터를 선택해야 함
+
+        filteredData.forEach((forecast, index) => {
+          const { main: { temp_min, temp_max }, weather, dt_txt } = forecast;          
+          const [{ icon, description }] = weather;
+          //날씨 관련 정보 배열(=weather)에서 첫 번째 요소를 추출 후 매칭되는 아이콘과 설명을 가져옴
+          const date = new Date(dt_txt);
+          //날짜 및 요일 정보
+          const day = date.getUTCDay();
+          // 요일 값을 가져옴. 일요일=0 ~ 토요일=6
+          const dayName = weekDayNames[day]
+          //가져온 요일 값(=숫자)를 텍스트 형식으로 만들기 위함
+
+          const formattedDate = `${date.getMonth() + 1}/${date.getDate()} ${dayName.charAt(0)}`;
+          //날짜 및 요일 형식을 '9/11 목'처럼 만들기 위함
+          //charAt() 메소드: String 으로 저장된 문자열 중에서 한 글자만 선택해서 char 타입으로 변환
+
+          const dayClass = (day === 0) ? 'day-sunday' : (day === 6) ? 'day-saturday' : '';
+          // 요일에 따라 클래스 설정. 왜? 날짜의 폰트 색을 지정하려고
+
+          //↓ 날씨 정보를 표시하기 위한 HTML 리스트 항목 생성.
+          //왜? 내가 제시하고자 하는 순서에 맞춰 새로 작성(기존 리스트의 제시 순서와 다름)
+          const listItem = `          
+            <li class="item">
+                <div class="date ${dayClass}">${formattedDate}</div>
+                <div class="icon">
+                    <img
+                        src="http://openweathermap.org/img/wn/${icon}.png"
+                        width="70"
+                        height="70"
+                        alt="${description}"
+                        class="img"
+                        title="${description}"
+                    />
+                </div>
+                <div class="temp">${Math.round(temp_min)}℃ / <br/> ${Math.round(temp_max)}℃</div> 
+            </li>
+          `;
+
+          $('#forecastList').append(listItem);
+        });
+      }).fail(function () {
+        alert('날씨 정보를 가져오는 데 실패했습니다. API 키와 도시 이름을 확인하세요.');
+      });
+    });
+
+    const monthNames = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
+    const weekDayNames = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+    
+
+  //스크롤업버튼
+  $(document).ready(function() {
+    $('.totop_btn').on('click', function() {
+      $('html').animate({ scrollTop: 0 }, 'smooth');
+    });
+});
+  </script>  
+</body>
+
+</html>

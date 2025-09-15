@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+
+/* 헤더 영역 */
+#header {
+  width: 100%;
+  height: 140px;
+  background-color: #fff;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  z-index: 99
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.header .logo img {
+  width: 100%;
+}
+
+.header .header_nav {
+  padding-top: 70px;
+}
+
+.header .header_nav .menu {
+  display: flex;
+}
+
+.header .header_nav .menu li {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.header .header_nav .menu li:last-child {
+  border: 1px solid #3C4C3D;
+}
+
+.header .header_nav .menu li a {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #3C4C3D;
+}
+
+
+/* challenge 영역 */
+#challenge{}
+
+.challenge{}
+.challenge .tab-wrap{margin-top: 30px;}
+.challenge .tab-wrap .tabmenu{display: flex;}
+.challenge .tab-wrap .tabmenu li{
+  width: 250px;
+  height: 50px;
+  text-align: center;  
+}
+.challenge .tab-wrap .tabmenu li a{
+  font-size: 4.8rem;
+  font-weight: 500;  
+  color: #D9D9D9;  
+}
+.challenge .tab-wrap .tabmenu li:hover a, .challenge .tab-wrap .tabmenu li.clicked a{  
+  font-weight: 700;
+  color: #3C4C3D;
+  border-bottom: 3px solid #3C4C3D;
+}
+
+.challenge .tabcont{
+  margin-top: 30px;
+}
+
+.challenge .tabcont section{  
+  display: none;
+}
+.challenge .tabcont section.active{
+  display: block;
+  display: flex;
+}
+
+.challenge .tabcont .tabcont_left{width: 50%;}
+.challenge .tabcont .tabcont_left .map{}
+.challenge .tabcont .tabcont_left .map .district{
+  fill: #D9D9D9;
+  fill-opacity: 1;
+  stroke: #333;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+}
+
+.challenge .tabcont .tabcont_left .map .district:hover, 
+.challenge .tabcont .tabcont_left .map .district.clicked{
+  fill: #6EB87B;
+}
+.challenge .tabcont .tabcont_left .map text{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.challenge .tabcont .tabcont_right{
+  padding: 15px;
+  width: 50%;
+}
+.challenge .tabcont .tabcont_right .list{
+  display: none;
+}
+.challenge .tabcont .tabcont_right .list.on{
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.challenge .tabcont .tabcont_right .list .list_title{
+  font-size: 4rem;
+  font-weight: 500;
+  color: #3C4C3D;
+  margin-bottom: 30px;
+  width: 100%;
+  display: inline-block;
+}
+.challenge .tabcont .tabcont_right .list li{
+  width: 160px;
+  height: 50px;
+  border: 1px solid #D9D9D9;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #333;
+  text-align: center;  
+  line-height: 1.8;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+}
+.challenge .tabcont .tabcont_right .list li:hover{
+  border: 1px solid #6EB87B;
+}
+.challenge .tabcont .tabcont_right .list li.complete{
+  background-image: linear-gradient(to left, #E0F0E1, #F2F7F3);
+}
+.challenge .tabcont .tabcont_right .list p{
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #D9D9D9;
+  cursor: default;
+}
+
+
+/* 푸터 영역 */
+#footer {
+  width: 100%;
+  background-color: #192922;
+  margin-top: 100px;
+}
+
+.footer .f_top {
+  height: 150px;
+}
+
+.footer .f_top .f_btn {
+  padding: 80px 50px 0 0;
+  /* width: 50px;
+    height: 50px;    */
+}
+
+.footer .f_top .f_btn img {
+  display: block;
+  align: right;
+}
+
+.footer .f_bottom {
+  height: 150px;
+  display: flex;
+  font-family: 'Pretendard';
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.footer .f_bottom .f_bottom_L {
+  width: 70%;
+  padding-left: 50px;
+}
+
+.footer .f_bottom .f_bottom_L .f_info {
+  display: flex;
+}
+
+.footer .f_bottom .f_bottom_L .f_info {}
+
+.footer .f_bottom .f_bottom_L .f_info li {
+  display: block;
+  line-height: 25px;
+  padding-left: 50px;
+  color: #FFFFFF;
+}
+
+.footer .f_bottom .f_bottom_R {
+  width: 30%;
+  line-height: 25px;
+  padding-right: 50px;
+  text-align: right;
+}
+
+.footer .f_bottom .f_bottom_R .f_link {}
+
+.footer .f_bottom .f_bottom_R .f_link a {
+  color: #FFF;
+}
+
+.footer .f_bottom .f_bottom_R .f_link a span {
+  font-weight: 500;
+  padding-right: 30px;
+}
+
+.footer .f_bottom .f_bottom_R .f_copy {
+  font-family: 'Lato';
+  color: #919191
+}

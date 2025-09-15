@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peaklog</title>
+
+  <link rel="icon" href="./image/favicon.png">
+  <link rel="stylesheet" href="./css/setting.css">
+  <link rel="stylesheet" href="./css/style_sub3.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <header class="header">
+        <a href="./index_main.html" class="logo">
+          <img src="./image/1_header/logo_B.png" alt="로고">
+        </a><!--.logo-->
+        <nav class="header_nav">
+          <ul class="menu">
+            <li><a href="./index_sub1.html">등산기록</a></li>
+            <li><a href="./index_sub2-1.html">코스검색</a></li>
+            <li><a href="./index_sub3.html">도전명산</a></li>
+            <li><a href="#">로그인</a></li>
+          </ul><!--.menu-->
+        </nav><!--.header_nav-->
+      </header><!--.header-->
+    </div>
+  </header><!--#header-->
+
+  <div id="challenge">
+    <div class="container">
+      <div class="challenge">
+        <div class="tab-wrap">
+          <ul class="tabmenu">
+            <li class="clicked"><a href="#">산림청 100</a></li>
+            <li><a href="#">BAC 100</a></li>
+            <li><a href="#">BAC 100+</a></li>          
+          </ul>
+        </div>
+        <div class="tabcont">
+          <section class="active">
+            <article class="tabcont_left">
+              <svg class="map" width="560" height="700">
+                <g class="district clicked seoul_gyeong-gi_incheon">
+                  <polygon class="gyeong-gi_incheon"
+                    points="162,69 179,90.5 201.5,96 203.5,108.5 217,115.5 217,125.5 209,132.5 209,156.5 242.5,169.5 234.5,176.5 234.5,207.5 232,214.5 215,237.5 201.5,237.5 183.5,258 168.5,248.5 142,258 133,248.5 121,224.5 117.5,214.5 104,214.5 94,207.5 106.5,203.5 121,203.5 121,196.5 127,183 125.5,178 129,173.5 129,164 117.5,156.5 106.5,164 87.5,164 67,141 67,132.5 76,132.5 83,137 90,132.5 104,141 121,130 121,113 138.5,100 138.5,90.5 151,80 151,72.5 162,69" />
+                  <polyline class="seoul"
+                    points="129,173.5 144,186.5 151,186.5 154,183 159.5,186.5 168.5,178 172.5,164 162,164 162,149 151,149 144,156.5 138.5,164 129,164" />
+                </g>
+
+                <polygon class="district gang-won"
+                  points="301.5,21 409,212 409,222 392,232 360,236 340,236 333.5,232 297,214.5 232,214.5 234.5,207.5 234.5,176.5 242.5,169.5 209,156.5 209,132.5 217,125.5 217,115.5 203.5,108.5 201.5,96 179,90.5 162,69 171,61 278.5,61 294.5,47 294.5,26.5" />
+
+                <polygon class="district chung-buk"
+                  points="232,214.5 297,214.5 333.5,232 307,254.5 307,262 298.5,268.5 288,262 240.5,296.5 247,300.5 244.5,336 261,339.5 261,349 257,349 257,354.5 261,357.5 247.5,370 223.5,369.5 206.5,345.5 211,320 182.5,290.5 182.5,283.5 192,269 183.5,258 201.5,237.5 215,237.5" />
+                <polygon class="district chung-nam"
+                  points="133,248.5 142,258 168.5,248.5 183.5,258 192,269 182.5,283.5 182.5,290.5 211,320 206.5,345.5 223.5,369.5 203.5,378 192,367 162,367 156.5,358 140,358 140,367 117,380 101.5,358 104.5,349 96.5,301.5 88,295.5 78,301.5 75.5,283.5 69,283.5 58,275.5 73.5,254.5 81,257.5 81,266.5 91.5,257.5 81,242 94.5,242 101.5,235" />
+
+                <polygon class="district gyeong-buk"
+                  points="333.5,232 340,236 360,236 392,232 409,222 417.5,232.5 417.5,262 423.5,271 423.5,288 417.5,288 417.5,300.5 420.5,306.5 410,349 417.5,363.5 410,373.5 417.5,380 430.5,366 434,373.5 423.5,419 410,419 405,423 399,416 384.5,416 373.5,431 359,423 348,435 339.5,435 279,423 279,409 247,390 247.5,370 261,357.5 257,354.5 257,349 261,349 261,339.5 244.5,336 247,300.5 240.5,296.5 288,262 298.5,268.5 307,262 307,254.5 333.5,232" />
+                <polygon class="district gyeong-nam"
+                  points="247,390 279,409 279,423 339.5,435 348,435 359,423 373.5,431 384.5,416 399,416 405,423 410,419 423.5,419 423,431 417.5,446.5 408,465 394.5,487 371.5,503.5 344.5,503.5 327.5,492.5 315.5,497.5 315.5,510.5 311,513 311,534.5 304.5,534.5 296,520.5 284.5,526 267,520.5 267,513 240.5,523 240.5,508 217.5,471 223.5,454 217.5,435" />
+
+
+                <polygon class="district jeon-buk"
+                  points="117,380 140,367 140,358 156.5,358 162,367 192,367 203.5,378 223.5,369.5 247.5,370 247,390 217.5,435 223.5,454 217.5,471 212,462 201,462 196,468 158.5,465 158.5,454 156,449.5 150,456.5 134.5,446.5 116,465 93.5,454 101,439.5 108.5,439.5 108.5,432.5 96,432.5 121.5,395 108.5,395 101,381" />
+                <polygon class="district jeon-nam"
+                  points="93.5,454 116,465 134.5,446.5 150,456.5 156,449.5 158.5,454 158.5,465 196,468 201,462 212,462 217.5,471 240.5,508 240.5,523 223,526 223,532.5 238.5,532.5 235,547.5 223,547.5 223,560 211.5,555.5 210,532.5 196.5,537 196.5,547.5 210,563.5 188,581.5 165.5,570 184,549.5 179.5,544 152.5,565 152.5,579 138.5,587 125,581.5 116,589 112,603 98.5,593.5 93.5,572 77,565 77,544 90.5,523 83,523 77,514 93.5,498 79,479.5 " />
+
+                <polygon class="district jeju"
+                  points="173.5,637.5 191,650.5 180.5,671 138,679 109,679 95,671 109,650.5" />
+                <g class="district ulleungdo_dokdo">
+                  <polygon class="ulleungdo" points="478.5,171 478.5,180 473.5,185 468.5,182 466,177 468.5,172" />
+                  <polygon class="dokdo" points="500,192.5 503,195 500,198 496.5,195" />
+                </g>
+
+                <text x="150" y="180" fill="black">서울/</text>
+                <text x="135" y="200" fill="black">경기/인천</text>
+                <text x="280" y="150" fill="black">강원</text>
+                <text x="210" y="280" fill="black">충북</text>
+                <text x="130" y="320" fill="black">충남</text>
+                <text x="150" y="420" fill="black">전북</text>
+                <text x="130" y="520" fill="black">전남</text>
+                <text x="320" y="350" fill="black">경북</text>
+                <text x="280" y="470" fill="black">경남</text>
+                <text x="130" y="665" fill="black">제주</text>
+                <text x="440" y="220" fill="black">울릉도/독도</text>
+              </svg>
+            </article>
+            <article class="tabcont_right">
+              <ul class="list on">
+                <h3 class="list_title">서울/경기/인천</h3>
+                <li><a href="#">감악산</a></li>
+                <li class="complete"><a href="#">관악산</a></li>
+                <li class="complete"><a href="#">도봉산</a></li>
+                <li><a href="#">마니산</a></li>
+                <li><a href="#">명성산</a></li>
+                <li><a href="#">명지산</a></li>
+                <li><a href="#">백운산<small>(포천)</small></a></li>
+                <li class="complete"><a href="#">북한산</a></li>
+                <li><a href="#">용문산</a></li>
+                <li><a href="#">운악산</a></li>
+                <li><a href="#">유명산</a></li>
+                <li><a href="#">천마산</a></li>
+                <li><a href="#">축령산</a></li>
+                <li><a href="#">화악산</a></li>
+              </ul> 
+              <ul class="list">
+                <h3 class="list_title">강원</h3>
+                <li><a href="#">가리산</a></li>
+                <li><a href="#">가리왕산</a></li>
+                <li><a href="#">계방산</a></li>
+                <li><a href="#">공작산</a></li>
+                <li><a href="#">대암산</a></li>
+                <li><a href="#">덕항산</a></li>
+                <li><a href="#">두타산</a></li>
+                <li><a href="#">명성산</a></li>
+                <li><a href="#">방태산</a></li>
+                <li><a href="#">백덕산</a></li>
+                <li><a href="#">백운산<small>(정선)</small></a></li>
+                <li><a href="#">삼악산</a></li>
+                <li><a href="#">설악산</a></li>
+                <li><a href="#">오대산</a></li>
+                <li><a href="#">오봉산</a></li>
+                <li><a href="#">용화산</a></li>
+                <li><a href="#">응봉상</a></li>
+                <li><a href="#">점봉산</a></li>
+                <li><a href="#">치악산</a></li>
+                <li><a href="#">태백산</a></li>
+                <li><a href="#">태화산</a></li>
+                <li><a href="#">팔봉산</a></li>
+                <li><a href="#">화악산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">충북</h3>
+                <li><a href="#">구병산</a></li>
+                <li><a href="#">금수산</a></li>
+                <li><a href="#">대야산</a></li>                
+                <li><a href="#">도락산</a></li>                
+                <li><a href="#">민주지산</a></li>                
+                <li><a href="#">서대산</a></li>                
+                <li><a href="#">소백산</a></li>                
+                <li><a href="#">속리산</a></li>                
+                <li><a href="#">월악산</a></li>                
+                <li><a href="#">천태산</a></li>                
+                <li><a href="#">태화산</a></li>                
+                <li><a href="#">희양산</a></li>               
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">충남</h3>               
+                <li><a href="#">계룡산</a></li>                
+                <li><a href="#">대둔산</a></li>                
+                <li><a href="#">덕숭산</a></li>                
+                <li><a href="#">서대산</a></li>                
+                <li><a href="#">천태산</a></li>                
+                <li><a href="#">칠갑산</a></li>                
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">경북</h3>               
+                <li><a href="#">가야산</a></li>
+                <li><a href="#">가지산</a></li>
+                <li><a href="#">구병산</a></li>
+                <li><a href="#">금오산</a></li>
+                <li><a href="#">남산</a></li>
+                <li><a href="#">내연산</a></li>
+                <li><a href="#">대야산</a></li>
+                <li><a href="#">민주지산</a></li>
+                <li><a href="#">비슬산</a></li>
+                <li><a href="#">소백산</a></li>
+                <li><a href="#">속리산</a></li>
+                <li><a href="#">운문산</a></li>
+                <li><a href="#">응봉산</a></li>
+                <li><a href="#">주왕산</a></li>
+                <li><a href="#">주흘산</a></li>
+                <li><a href="#">철량산</a></li>
+                <li><a href="#">태백산</a></li>
+                <li><a href="#">팔공산</a></li>
+                <li><a href="#">황악산</a></li>
+                <li><a href="#">황장산</a></li>
+                <li><a href="#">희양산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">경남</h3>               
+                <li><a href="#">가야산</a></li>
+                <li><a href="#">가지산</a></li>
+                <li><a href="#">금산</a></li>
+                <li><a href="#">금정산</a></li>
+                <li><a href="#">덕유산</a></li>
+                <li><a href="#">무학산</a></li>
+                <li><a href="#">미륵산</a></li>
+                <li><a href="#">신불산</a></li>
+                <li><a href="#">연화산</a></li>
+                <li><a href="#">운문산</a></li>
+                <li><a href="#">재약산</a></li>
+                <li><a href="#">지리산</a></li>
+                <li><a href="#">지리산<small>(통영)</small></a></li>
+                <li><a href="#">천성산</a></li>
+                <li><a href="#">화왕산</a></li>
+                <li><a href="#">황매산</a></li>
+                <li><a href="#">황석산</a></li>                              
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">전북</h3>                               
+                <li><a href="#">강천산</a></li>
+                <li><a href="#">내장산</a></li>
+                <li><a href="#">대둔산</a></li>
+                <li><a href="#">덕유산</a></li>
+                <li><a href="#">마이산</a></li>
+                <li><a href="#">모악산</a></li>
+                <li><a href="#">민주지산</a></li>
+                <li><a href="#">방장산</a></li>
+                <li><a href="#">백암산</a></li>
+                <li><a href="#">변산</a></li>
+                <li><a href="#">선운산</a></li>
+                <li><a href="#">운장산</a></li>
+                <li><a href="#">장안산</a></li>
+                <li><a href="#">적상산</a></li>
+                <li><a href="#">지리산</a></li>
+                <li><a href="#">추월산</a></li>
+              </ul>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">전남</h3>                               
+                <li><a href="#">강천산</a></li>
+                <li><a href="#">깃대봉</a></li>
+                <li><a href="#">두륜산</a></li>
+                <li><a href="#">무등산</a></li>
+                <li><a href="#">방장산</a></li>
+                <li><a href="#">백암산</a></li>
+                <li><a href="#">백운산<small>(광양)</small></a></li>
+                <li><a href="#">월출산</a></li>
+                <li><a href="#">조계산</a></li>
+                <li><a href="#">지리산</a></li>
+                <li><a href="#">천관산</a></li>
+                <li><a href="#">추월산</a></li>
+                <li><a href="#">팔영산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">제주</h3>                               
+                <li><a href="#">한라산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">울릉도/독도</h3>
+                <li><a href="#">성인봉</a></li>            
+              </ul>
+            </article>
+          </section>
+          <section>
+            <article class="tabcont_left">
+              <svg class="map" width="560" height="700">
+                <g class="district clicked seoul_gyeong-gi_incheon">
+                  <polygon class="gyeong-gi_incheon"
+                    points="162,69 179,90.5 201.5,96 203.5,108.5 217,115.5 217,125.5 209,132.5 209,156.5 242.5,169.5 234.5,176.5 234.5,207.5 232,214.5 215,237.5 201.5,237.5 183.5,258 168.5,248.5 142,258 133,248.5 121,224.5 117.5,214.5 104,214.5 94,207.5 106.5,203.5 121,203.5 121,196.5 127,183 125.5,178 129,173.5 129,164 117.5,156.5 106.5,164 87.5,164 67,141 67,132.5 76,132.5 83,137 90,132.5 104,141 121,130 121,113 138.5,100 138.5,90.5 151,80 151,72.5 162,69" />
+                  <polyline class="seoul"
+                    points="129,173.5 144,186.5 151,186.5 154,183 159.5,186.5 168.5,178 172.5,164 162,164 162,149 151,149 144,156.5 138.5,164 129,164" />
+                </g>
+
+                <polygon class="district gang-won"
+                  points="301.5,21 409,212 409,222 392,232 360,236 340,236 333.5,232 297,214.5 232,214.5 234.5,207.5 234.5,176.5 242.5,169.5 209,156.5 209,132.5 217,125.5 217,115.5 203.5,108.5 201.5,96 179,90.5 162,69 171,61 278.5,61 294.5,47 294.5,26.5" />
+
+                <polygon class="district chung-buk"
+                  points="232,214.5 297,214.5 333.5,232 307,254.5 307,262 298.5,268.5 288,262 240.5,296.5 247,300.5 244.5,336 261,339.5 261,349 257,349 257,354.5 261,357.5 247.5,370 223.5,369.5 206.5,345.5 211,320 182.5,290.5 182.5,283.5 192,269 183.5,258 201.5,237.5 215,237.5" />
+                <polygon class="district chung-nam"
+                  points="133,248.5 142,258 168.5,248.5 183.5,258 192,269 182.5,283.5 182.5,290.5 211,320 206.5,345.5 223.5,369.5 203.5,378 192,367 162,367 156.5,358 140,358 140,367 117,380 101.5,358 104.5,349 96.5,301.5 88,295.5 78,301.5 75.5,283.5 69,283.5 58,275.5 73.5,254.5 81,257.5 81,266.5 91.5,257.5 81,242 94.5,242 101.5,235" />
+
+                <polygon class="district gyeong-buk"
+                  points="333.5,232 340,236 360,236 392,232 409,222 417.5,232.5 417.5,262 423.5,271 423.5,288 417.5,288 417.5,300.5 420.5,306.5 410,349 417.5,363.5 410,373.5 417.5,380 430.5,366 434,373.5 423.5,419 410,419 405,423 399,416 384.5,416 373.5,431 359,423 348,435 339.5,435 279,423 279,409 247,390 247.5,370 261,357.5 257,354.5 257,349 261,349 261,339.5 244.5,336 247,300.5 240.5,296.5 288,262 298.5,268.5 307,262 307,254.5 333.5,232" />
+                <polygon class="district gyeong-nam"
+                  points="247,390 279,409 279,423 339.5,435 348,435 359,423 373.5,431 384.5,416 399,416 405,423 410,419 423.5,419 423,431 417.5,446.5 408,465 394.5,487 371.5,503.5 344.5,503.5 327.5,492.5 315.5,497.5 315.5,510.5 311,513 311,534.5 304.5,534.5 296,520.5 284.5,526 267,520.5 267,513 240.5,523 240.5,508 217.5,471 223.5,454 217.5,435" />
+
+
+                <polygon class="district jeon-buk"
+                  points="117,380 140,367 140,358 156.5,358 162,367 192,367 203.5,378 223.5,369.5 247.5,370 247,390 217.5,435 223.5,454 217.5,471 212,462 201,462 196,468 158.5,465 158.5,454 156,449.5 150,456.5 134.5,446.5 116,465 93.5,454 101,439.5 108.5,439.5 108.5,432.5 96,432.5 121.5,395 108.5,395 101,381" />
+                <polygon class="district jeon-nam"
+                  points="93.5,454 116,465 134.5,446.5 150,456.5 156,449.5 158.5,454 158.5,465 196,468 201,462 212,462 217.5,471 240.5,508 240.5,523 223,526 223,532.5 238.5,532.5 235,547.5 223,547.5 223,560 211.5,555.5 210,532.5 196.5,537 196.5,547.5 210,563.5 188,581.5 165.5,570 184,549.5 179.5,544 152.5,565 152.5,579 138.5,587 125,581.5 116,589 112,603 98.5,593.5 93.5,572 77,565 77,544 90.5,523 83,523 77,514 93.5,498 79,479.5 " />
+
+                <polygon class="district jeju"
+                  points="173.5,637.5 191,650.5 180.5,671 138,679 109,679 95,671 109,650.5" />
+                <g class="district ulleungdo_dokdo">
+                  <polygon class="ulleungdo" points="478.5,171 478.5,180 473.5,185 468.5,182 466,177 468.5,172" />
+                  <polygon class="dokdo" points="500,192.5 503,195 500,198 496.5,195" />
+                </g>
+
+
+                <text x="150" y="180" fill="black">서울/</text>
+                <text x="135" y="200" fill="black">경기/인천</text>
+                <text x="280" y="150" fill="black">강원</text>
+                <text x="210" y="280" fill="black">충북</text>
+                <text x="130" y="320" fill="black">충남</text>
+                <text x="150" y="420" fill="black">전북</text>
+                <text x="130" y="520" fill="black">전남</text>
+                <text x="320" y="350" fill="black">경북</text>
+                <text x="280" y="470" fill="black">경남</text>
+                <text x="130" y="665" fill="black">제주</text>
+                <text x="440" y="220" fill="black">울릉도/독도</text>
+              </svg>
+            </article>
+            <article class="tabcont_right">
+              <ul class="list">
+                <h3 class="list_title">서울/경기/인천</h3>
+                <li><a href="#">감악산</a></li>
+                <li><a href="#">관악산</a></li>
+                <li><a href="#">도봉산</a></li>
+                <li><a href="#">마니산</a></li>
+                <li><a href="#">명지산</a></li>
+                <li><a href="#">북한산</a></li>
+                <li><a href="#">소요산</a></li>
+                <li><a href="#">수락산</a></li>
+                <li><a href="#">연인산</a></li>
+                <li><a href="#">용문산</a></li>
+                <li><a href="#">운악산</a></li>
+                <li><a href="#">유명산</a></li>
+                <li><a href="#">천마산</a></li>
+                <li><a href="#">청계산</a></li>
+                <li><a href="#">화악산</a></li>
+              </ul> 
+              <ul class="list">
+                <h3 class="list_title">강원</h3>
+                <li><a href="#">가리산</a></li>                
+                <li><a href="#">가리왕산</a></li>                
+                <li><a href="#">감악산</a></li>                
+                <li><a href="#">계방산</a></li>                
+                <li><a href="#">덕항산</a></li>                
+                <li><a href="#">두타산</a></li>                
+                <li><a href="#">방태산</a></li>                
+                <li><a href="#">백덕산</a></li>                
+                <li><a href="#">백운산</a></li>                
+                <li><a href="#">삼악산</a></li>                
+                <li><a href="#">설악산</a></li>                
+                <li><a href="#">오대산</a></li>                
+                <li><a href="#">오봉산</a></li>
+                <li><a href="#">용화산</a></li>
+                <li><a href="#">응봉산</a></li>
+                <li><a href="#">치악산</a></li>
+                <li><a href="#">태백산</a></li>
+                <li><a href="#">태화산</a></li>
+                <li><a href="#">팔봉산</a></li>
+                <li><a href="#">함백산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">충북</h3>
+                <li><a href="#">구병산</a></li> 
+                <li><a href="#">금수산</a></li> 
+                <li><a href="#">대야산</a></li> 
+                <li><a href="#">도락산</a></li> 
+                <li><a href="#">민주지산</a></li> 
+                <li><a href="#">속리산</a></li> 
+                <li><a href="#">월악산</a></li> 
+                <li><a href="#">천태산</a></li> 
+                <li><a href="#">청화산</a></li> 
+                <li><a href="#">칠보산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">충남</h3>
+                <li><a href="#">가야산</a></li>
+                <li><a href="#">계룡산</a></li>
+                <li><a href="#">광덕산</a></li>
+                <li><a href="#">대둔산</a></li>
+                <li><a href="#">오서산</a></li>
+                <li><a href="#">용봉산</a></li>
+                <li><a href="#">칠갑산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">경북</h3>
+                <li><a href="#">금오산</a></li>
+                <li><a href="#">남산</a></li>
+                <li><a href="#">내연산</a></li>
+                <li><a href="#">소백산</a></li>
+                <li><a href="#">조령산</a></li>
+                <li><a href="#">주왕산</a></li>
+                <li><a href="#">주흘산</a></li>
+                <li><a href="#">청량산</a></li>
+                <li><a href="#">팔공산</a></li>
+                <li><a href="#">황악산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">경남</h3>
+                <li><a href="#">가야산</a></li>
+                <li><a href="#">가지산</a></li>
+                <li><a href="#">금정산</a></li>
+                <li><a href="#">비슬산</a></li>
+                <li><a href="#">신불산</a></li>
+                <li><a href="#">재약산</a></li>
+                <li><a href="#">지리산</a></li>
+                <li><a href="#">천성산</a></li> 
+                <li><a href="#">화왕산</a></li>
+                <li><a href="#">황매산</a></li>
+                <li><a href="#">황석산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">전북</h3>
+                <li><a href="#">구봉산</a></li>  
+                <li><a href="#">내변산</a></li>  
+                <li><a href="#">내장산</a></li>  
+                <li><a href="#">덕유산</a></li>  
+                <li><a href="#">마이산</a></li>  
+                <li><a href="#">모아산</a></li>  
+                <li><a href="#">선운산</a></li>  
+                <li><a href="#">운장산</a></li>  
+                <li><a href="#">장안산</a></li>  
+                <li><a href="#">지리산</a></li>                
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">전남</h3>
+                <li><a href="#">달마산</a></li>        
+                <li><a href="#">덕룡산</a></li>        
+                <li><a href="#">동악산</a></li>        
+                <li><a href="#">두륜산</a></li>        
+                <li><a href="#">무등산</a></li>        
+                <li><a href="#">방장산</a></li>        
+                <li><a href="#">백암산</a></li>        
+                <li><a href="#">백운산</a></li>        
+                <li><a href="#">불갑산</a></li>        
+                <li><a href="#">월출산</a></li>        
+                <li><a href="#">조계산</a></li> 
+                <li><a href="#">천관산</a></li>        
+                <li><a href="#">축령산</a></li>        
+                <li><a href="#">팔영산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">제주</h3>
+                <li><a href="#">한라산</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">울릉도/독도</h3>
+                <p>없음</p>                
+              </ul>
+            </article>
+          </section>
+          <section>
+            <article class="tabcont_left">
+              <svg class="map" width="560" height="700">
+                <g class="district clicked seoul_gyeong-gi_incheon">
+                  <polygon class="gyeong-gi_incheon"
+                    points="162,69 179,90.5 201.5,96 203.5,108.5 217,115.5 217,125.5 209,132.5 209,156.5 242.5,169.5 234.5,176.5 234.5,207.5 232,214.5 215,237.5 201.5,237.5 183.5,258 168.5,248.5 142,258 133,248.5 121,224.5 117.5,214.5 104,214.5 94,207.5 106.5,203.5 121,203.5 121,196.5 127,183 125.5,178 129,173.5 129,164 117.5,156.5 106.5,164 87.5,164 67,141 67,132.5 76,132.5 83,137 90,132.5 104,141 121,130 121,113 138.5,100 138.5,90.5 151,80 151,72.5 162,69" />
+                  <polyline class="seoul"
+                    points="129,173.5 144,186.5 151,186.5 154,183 159.5,186.5 168.5,178 172.5,164 162,164 162,149 151,149 144,156.5 138.5,164 129,164" />
+                </g>
+
+                <polygon class="district gang-won"
+                  points="301.5,21 409,212 409,222 392,232 360,236 340,236 333.5,232 297,214.5 232,214.5 234.5,207.5 234.5,176.5 242.5,169.5 209,156.5 209,132.5 217,125.5 217,115.5 203.5,108.5 201.5,96 179,90.5 162,69 171,61 278.5,61 294.5,47 294.5,26.5" />
+
+                <polygon class="district chung-buk"
+                  points="232,214.5 297,214.5 333.5,232 307,254.5 307,262 298.5,268.5 288,262 240.5,296.5 247,300.5 244.5,336 261,339.5 261,349 257,349 257,354.5 261,357.5 247.5,370 223.5,369.5 206.5,345.5 211,320 182.5,290.5 182.5,283.5 192,269 183.5,258 201.5,237.5 215,237.5" />
+                <polygon class="district chung-nam"
+                  points="133,248.5 142,258 168.5,248.5 183.5,258 192,269 182.5,283.5 182.5,290.5 211,320 206.5,345.5 223.5,369.5 203.5,378 192,367 162,367 156.5,358 140,358 140,367 117,380 101.5,358 104.5,349 96.5,301.5 88,295.5 78,301.5 75.5,283.5 69,283.5 58,275.5 73.5,254.5 81,257.5 81,266.5 91.5,257.5 81,242 94.5,242 101.5,235" />
+
+                <polygon class="district gyeong-buk"
+                  points="333.5,232 340,236 360,236 392,232 409,222 417.5,232.5 417.5,262 423.5,271 423.5,288 417.5,288 417.5,300.5 420.5,306.5 410,349 417.5,363.5 410,373.5 417.5,380 430.5,366 434,373.5 423.5,419 410,419 405,423 399,416 384.5,416 373.5,431 359,423 348,435 339.5,435 279,423 279,409 247,390 247.5,370 261,357.5 257,354.5 257,349 261,349 261,339.5 244.5,336 247,300.5 240.5,296.5 288,262 298.5,268.5 307,262 307,254.5 333.5,232" />
+                <polygon class="district gyeong-nam"
+                  points="247,390 279,409 279,423 339.5,435 348,435 359,423 373.5,431 384.5,416 399,416 405,423 410,419 423.5,419 423,431 417.5,446.5 408,465 394.5,487 371.5,503.5 344.5,503.5 327.5,492.5 315.5,497.5 315.5,510.5 311,513 311,534.5 304.5,534.5 296,520.5 284.5,526 267,520.5 267,513 240.5,523 240.5,508 217.5,471 223.5,454 217.5,435" />
+
+
+                <polygon class="district jeon-buk"
+                  points="117,380 140,367 140,358 156.5,358 162,367 192,367 203.5,378 223.5,369.5 247.5,370 247,390 217.5,435 223.5,454 217.5,471 212,462 201,462 196,468 158.5,465 158.5,454 156,449.5 150,456.5 134.5,446.5 116,465 93.5,454 101,439.5 108.5,439.5 108.5,432.5 96,432.5 121.5,395 108.5,395 101,381" />
+                <polygon class="district jeon-nam"
+                  points="93.5,454 116,465 134.5,446.5 150,456.5 156,449.5 158.5,454 158.5,465 196,468 201,462 212,462 217.5,471 240.5,508 240.5,523 223,526 223,532.5 238.5,532.5 235,547.5 223,547.5 223,560 211.5,555.5 210,532.5 196.5,537 196.5,547.5 210,563.5 188,581.5 165.5,570 184,549.5 179.5,544 152.5,565 152.5,579 138.5,587 125,581.5 116,589 112,603 98.5,593.5 93.5,572 77,565 77,544 90.5,523 83,523 77,514 93.5,498 79,479.5 " />
+
+                <polygon class="district jeju"
+                  points="173.5,637.5 191,650.5 180.5,671 138,679 109,679 95,671 109,650.5" />
+                <g class="district ulleungdo_dokdo">
+                  <polygon class="ulleungdo" points="478.5,171 478.5,180 473.5,185 468.5,182 466,177 468.5,172" />
+                  <polygon class="dokdo" points="500,192.5 503,195 500,198 496.5,195" />
+                </g>
+
+
+                <text x="150" y="180" fill="black">서울/</text>
+                <text x="135" y="200" fill="black">경기/인천</text>
+                <text x="280" y="150" fill="black">강원</text>
+                <text x="210" y="280" fill="black">충북</text>
+                <text x="130" y="320" fill="black">충남</text>
+                <text x="150" y="420" fill="black">전북</text>
+                <text x="130" y="520" fill="black">전남</text>
+                <text x="320" y="350" fill="black">경북</text>
+                <text x="280" y="470" fill="black">경남</text>
+                <text x="130" y="665" fill="black">제주</text>
+                <text x="440" y="220" fill="black">울릉도/독도</text>
+              </svg>
+            </article>
+            <article class="tabcont_right">
+              <ul class="list on">
+                <h3 class="list_title">서울/경기/인천</h3>
+                <li><a href="#">감단산</a></li>
+                <li><a href="#">고대산</a></li>
+                <li><a href="#">고려산</a></li>
+                <li><a href="#">광교산</a></li>
+                <li><a href="#">남한산</a></li>
+                <li><a href="#">모락산</a></li>
+                <li><a href="#">불곡산</a></li>
+                <li><a href="#">불암산</a></li>
+                <li><a href="#">수리산</a></li>
+                <li><a href="#">원적산</a></li>
+                <li><a href="#">인왕산</a></li>
+                <li><a href="#">종자산</a></li>
+                <li><a href="#">중원산</a></li>
+                <li><a href="#">주금산</a></li>
+                <li><a href="#">축령산</a></li>
+                <li><a href="#">화야산</a></li>
+              </ul> 
+              <ul class="list">
+                <h3 class="list_title">강원</h3>
+                <li><a href="#">검봉산</a></li>
+                <li><a href="#">구봉대산</a></li>
+                <li><a href="#">귀때기청봉</a></li>
+                <li><a href="#">금학산</a></li>
+                <li><a href="#">노추산</a></li>
+                <li><a href="#">두위봉</a></li>
+                <li><a href="#">마대산</a></li>
+                <li><a href="#">민둥산</a></li>
+                <li><a href="#">발왕산</a></li>
+                <li><a href="#">백암산</a></li>
+                <li><a href="#">사명산</a></li>
+                <li><a href="#">석화산</a></li>
+                <li><a href="#">아미산</a></li>
+                <li><a href="#">연화산</a></li>
+                <li><a href="#">운문산</a></li>
+                <li><a href="#">청태산</a></li>
+                <li><a href="#">초록봉</a></li>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">충북</h3>
+                <li><a href="#">가은산</a></li>      
+                <li><a href="#">갈기산</a></li>      
+                <li><a href="#">계명산</a></li>      
+                <li><a href="#">낙영산</a></li>      
+                <li><a href="#">동산</a></li>      
+                <li><a href="#">두타산</a></li>      
+                <li><a href="#">장령산</a></li>      
+                <li><a href="#">제비봉</a></li>      
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">충남</h3>
+                <li><a href="#">갑하산</a></li>   
+                <li><a href="#">계족산</a></li>   
+                <li><a href="#">덕숭산</a></li>   
+                <li><a href="#">선야산</a></li>   
+                <li><a href="#">식장산</a></li>   
+                <li><a href="#">진악산</a></li>   
+                <li><a href="#">팔봉산</a></li>   
+                <li><a href="#">향적산</a></li>   
+                <li><a href="#">흑성산</a></li>   
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">경북</h3>
+                <li><a href="#">갑장산</a></li>    
+                <li><a href="#">단석산</a></li>    
+                <li><a href="#">도장산</a></li>    
+                <li><a href="#">묘봉</a></li>    
+                <li><a href="#">백화산</a></li>    
+                <li><a href="#">성주봉</a></li>    
+                <li><a href="#">수도산</a></li>    
+                <li><a href="#">아미산</a></li>    
+                <li><a href="#">앞산</a></li>    
+                <li><a href="#">운제산</a></li>    
+                <li><a href="#">운문산</a></li>    
+                <li><a href="#">유학산</a></li>    
+                <li><a href="#">일월산</a></li>    
+                <li><a href="#">팔각산</a></li>    
+                <li><a href="#">토함산</a></li>    
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">경남</h3>
+                <li><a href="#">거류산</a></li>   
+                <li><a href="#">계룡산</a></li>   
+                <li><a href="#">굴암산</a></li>   
+                <li><a href="#">기백산</a></li>   
+                <li><a href="#">남산제일봉</a></li>   
+                <li><a href="#">대봉산</a></li>   
+                <li><a href="#">무척산</a></li>   
+                <li><a href="#">무학산</a></li>   
+                <li><a href="#">미숭산</a></li>   
+                <li><a href="#">벽방산</a></li>   
+                <li><a href="#">비계산</a></li>   
+                <li><a href="#">삼신봉</a></li>   
+                <li><a href="#">설흘산</a></li>   
+                <li><a href="#">승학산</a></li>   
+                <li><a href="#">신어산</a></li>   
+                <li><a href="#">연화산</a></li>   
+                <li><a href="#">와룡산</a></li>   
+                <li><a href="#">왕산</a></li>   
+                <li><a href="#">우두산</a></li>   
+                <li><a href="#">웅석봉</a></li>   
+                <li><a href="#">월봉산</a></li>   
+                <li><a href="#">장복산</a></li>   
+                <li><a href="#">장산</a></li>   
+                <li><a href="#">현성산</a></li>                
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">전북</h3>
+                <li><a href="#">강천산</a></li> 
+                <li><a href="#">고덕산</a></li> 
+                <li><a href="#">고리봉</a></li> 
+                <li><a href="#">기차산</a></li> 
+                <li><a href="#">노고단</a></li> 
+                <li><a href="#">만행산</a></li> 
+                <li><a href="#">쇠뿔바위봉</a></li> 
+                <li><a href="#">적상산</a></li> 
+                <li><a href="#">추월산</a></li> 
+                <li><a href="#">팔공산</a></li> 
+                <li><a href="#">회문산</a></li> 
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">전남</h3>
+                <li><a href="#">금강산</a></li>   
+                <li><a href="#">금당산</a></li>   
+                <li><a href="#">동석산</a></li>   
+                <li><a href="#">만덕산</a></li>   
+                <li><a href="#">모후산</a></li>   
+                <li><a href="#">백아산</a></li>   
+                <li><a href="#">병풍산</a></li>   
+                <li><a href="#">영취산</a></li>   
+                <li><a href="#">오봉산</a></li>   
+                <li><a href="#">오산</a></li>   
+                <li><a href="#">제암산</a></li>   
+                <li><a href="#">천등산</a></li>   
+                <li><a href="#">초암산</a></li>   
+                <li><a href="#">흑석산</a></li>                
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">제주</h3>
+                <p>없음</p>
+              </ul>
+              <ul class="list">
+                <h3 class="list_title">울릉도/독도</h3>
+                <p>없음</p>           
+              </ul>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer id="footer">
+    <div class="container">
+      <footer class="footer">
+        <section class="f_top">
+          <div class="f_btn">
+            <img src="./image/4_footer/upbtn.png" alt="업버튼">
+          </div><!--.f_btn-->
+        </section><!--.f_top-->
+        <section class="f_bottom">
+          <article class="f_bottom_L">
+            <ul class="f_info">
+              <li>대표 <br> 김혜진</li>
+              <li>사업자번호 <br> 2025-08-20</li>
+              <li>통신판매신고 <br> 제2025-서울 -0820호</li>
+              <li>대표전화 <br> 02-123-4567</li>
+            </ul>
+          </article><!--.f_info-->
+          <article class="f_bottom_R">
+            <div class="f_link">
+              <a href="#"><span>개인정보처리방침</span></a>
+              <a href="#">이용약관</a>
+            </div><!--.f_link-->
+            <div class="f_copy">
+              <em>Copyright ⓒ Peaklog All Rights Reserved.</em>
+            </div><!--.f_copy-->
+          </article>
+
+        </section><!--.f_bottom-->
+      </footer><!--.footer-->
+    </div>
+  </footer><!--#footer-->
+
+<!-- 스크립트 -->
+  <script>
+  //탭메뉴
+  $(".tab-wrap>.tabmenu>li").on('click', function() {
+    //클릭된 항목의 인덱스를 가져옴
+    let index = $(this).index();
+    
+    // 모든 li에서 clicked 클래스 제거 (hover 효과 제거)
+    $(".tab-wrap>.tabmenu>li").removeClass('clicked');
+    // 클릭된 li에 clicked 클래스 추가 (hover 효과 유지)
+    $(this).addClass('clicked');
+    
+    //모든 section의 active 클래스 제거
+    $('.tabcont>section').removeClass('active');
+    //클릭된 index에 해당하는 section에 active 추가
+    $('.tabcont>section:eq('+ index +')').addClass('active');
+  });
+
+  //지도탭
+  $(".tabcont_left .map .district.active").on('click', function() {
+    //클릭된 항목의 인덱스를 가져옴
+    let index = $(this).index();
+    
+    // 모든 district에서 clicked 클래스 제거 (hover 효과 제거)
+    $(".tabcont_left .map .district").removeClass('clicked');
+    // 클릭된 district에 clicked 클래스 추가 (hover 효과 유지)
+    $(this).addClass('clicked');
+
+    //모든 ul(=.list)의 on 클래스 제거
+    $('.tabcont_right>ul').removeClass('on');
+    //클릭된 index에 해당하는 ul(=.list)에 on 추가
+    $('.tabcont_right>ul:eq('+ index +')').addClass('on');    
+  });
+  </script>
+</body>
+</html>

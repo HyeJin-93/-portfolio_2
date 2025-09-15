@@ -1,0 +1,683 @@
+@charset "UTF-8";
+
+@media screen and (max-width:1290px) {
+  .container { width: 100%; }
+}
+
+@media screen and (max-width:1080px) {
+  /* 스와이퍼 */
+  .mySwiper2 .swiper-slide .text_wrap .title{
+    margin: 200px 0 20px 150px;
+  }
+  .mySwiper2 .swiper-slide .text_wrap .sub {
+    margin-left: 150px;
+  }
+  /* 스와이퍼 컨트롤 */
+  .swiper-pagination { left: 20.5%; }
+
+  .autoplay-progress { left: 22.3%; }
+
+  .button { left: 35%; }
+
+  /* 데이터 */
+  .data .user .user_top p {
+    font-size: 6rem;
+  }
+
+  .data .user .user_top p em {
+    font-size: 3rem;
+  }
+
+  .data .user .user_bottom .percent img{
+    width: 50px;
+    height: 50px;
+  }
+  .data .user .user_bottom .percent p {
+    font-size: 3.2rem;    
+  }
+
+  .data .ranking .rank img {
+    width: 55px;
+    height: 55px;    
+  }
+  .data .ranking .rank p {
+    font-size: 2.8rem;
+  }
+  .data .ranking .rank .left{
+    display: flex;
+    width: 35%;
+  }
+
+  .data .ranking .rank .right{ 
+    width: 65%;    
+    margin-right: 10px;  
+  }
+}
+
+@media screen and (max-width:940px) {
+  /* 스와이퍼 */
+  .mySwiper2 .swiper-slide .text_wrap .title{
+    font-size: 4.6rem;
+    margin: 200px 0 20px 230px;
+  }
+  .mySwiper2 .swiper-slide .text_wrap .sub {
+    font-size: 2.2rem;
+    margin-left: 230px;
+  }
+  /* 스와이퍼 컨트롤 */
+  .swiper-pagination { left: 20%; }
+
+  .autoplay-progress { left: 22.3%; }
+
+  .button { left: 38.5%; }
+
+
+  /* 날씨 */
+  .weather{ flex-direction: column; }
+  .weather .title {
+    display: inline-flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center;
+    width: 100%;
+    margin: 0px 0px;
+    padding: 20px 0;
+  }
+  .weather .title small{
+    padding-top: 15px;
+  }
+  .weather .card {
+    width: 100%;
+    padding: 8px;
+  }
+
+  /* 추천코스 */
+  .course .item_wrap .course_item.c1 {
+    top: 240px;
+    height: 790px;
+  }
+
+  .course .item_wrap .course_item.c2 {
+    top: 335px;
+    height: 710px;
+  }
+
+  .course .item_wrap .course_item.c3 {
+    top: 420px;
+    height: 630px;
+  }
+
+  .course .item_wrap .course_item .item_title a {
+    font-size: 4rem;    
+  }
+  .course .item_wrap .course_item .item_desc {
+    flex-direction: column-reverse;
+  }
+
+  .course .item_wrap .course_item .item_desc .item_text {
+    width: 100%;
+    font-size: 2.6rem;
+  }
+
+  .course .item_wrap .course_item .item_desc .item_text p {
+    margin-top: 20px;
+  }
+
+  .course .item_wrap .course_item .item_desc .item_text .item_text_bottom {
+    padding-top: 20px;
+    font-size: 3.8rem;    
+  }
+
+  .course .item_wrap .course_item .item_desc img {
+    display: none;
+  }
+  .course .item_wrap .course_item .item_desc img.mob {   
+    display: block;
+    width: 100%;
+    height: 240px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width:900px) {
+  /* 데이터 영역 */
+  .data {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 50px 0;
+  }
+
+  .data .user {
+    width: 30%;
+  }
+
+  .data .user .user_top {
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .data .user .user_top p {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .data .user .user_top p em {
+    font-style: normal;
+    font-size: 3rem;
+  }
+
+  .data .user .user_top p:last-child {
+    border-left: none;
+    border-top: 3px solid #014023;
+  }
+
+  .data .user .user_bottom {
+    height: 30%;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .data .user .user_bottom .percent {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .data .user .user_bottom .percent p {
+    font-size: 3.2rem;
+  }
+
+  .data .ranking {
+    width: 65%;
+  }
+
+}
+
+
+@media screen and (max-width:800px) {
+  /* 스와이퍼 컨트롤 */
+  .swiper-pagination { left: 19.5%; }
+  .button { left: 39.5%; }
+
+  /* 푸터영역 */
+  .footer .f_bottom {
+    height: 15rem;
+    flex-direction: column;
+  }
+
+  .footer .f_bottom .f_bottom_L { width: 100%; }
+  .footer .f_bottom .f_bottom_L .f_info li {
+    padding-left: 30px;    
+  }
+  .footer .f_bottom .f_bottom_L .f_info li:nth-of-type(1) {padding-left: 1rem;}
+
+  .footer .f_bottom .f_bottom_R {
+    width: 100%;    
+    text-align: left;
+    padding-left: 1rem;
+    margin-top: 30px;
+  }
+}
+
+
+
+@media screen and (max-width:768px) {
+  /* 헤더 */
+  #header {
+    height: 15rem;  
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  }
+  #header.on .header .roll_logo {
+    display: block;
+    padding: 0px 0 0px 0;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .header .logo .logo_link{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .logo { display: none; }
+  .header .roll_logo { 
+    display: block;
+    height: 9rem;
+    margin: 6px 0;
+  }
+    
+  .header .header_nav{ padding: 5px 0; }
+  .header .header_nav .menu li a {
+    width: 8.5rem;
+    height: 3rem;
+    line-height: 30px;
+    color: #3C4C3D;
+    transition: transform 0.3s ease-in-out;
+  }
+  .header .header_nav .menu li:last-of-type { border: 1px solid #3C4C3D; }
+
+  /* 스와이퍼 */
+  .mySwiper2 .swiper-slide .text_wrap .title {
+    margin: 170px 0 20px 0px;
+    text-align: center;
+  }
+
+  .mySwiper2 .swiper-slide .text_wrap .sub {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .mySwiper2 .swiper-slide .text_wrap .mob{
+    display: block;
+  }
+  /* 스와이퍼 컨트롤 */
+  .swiper-pagination { left: 19.5%; }
+  .button { left: 39.5%; }
+
+  /* 날씨 */
+  .weather .card {
+    width: 80%;
+    padding: 8px;
+    margin: 0 auto;
+  }
+  .weather .card .list {
+    flex-direction: column;
+  }
+
+  .weather .card .list .item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 8rem;
+    margin: 5px 0px;
+    padding: 15px;
+    text-align: center;
+    flex: unset;
+  }
+
+  .weather .card .list .item .date {
+    font-size: 2rem;
+    width: 3.5rem;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .weather .card .list .item .icon {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .weather .card .list .item .temp {
+    width: 6rem;
+    font-size: 2.0rem;
+    font-weight: 500;
+  }
+
+  /* 추천코스 */
+  .course .course_title {
+    font-size: 4rem;
+  }
+
+  .course .course_title em {    
+    font-size: 2.2rem;    
+  }
+  .course .item_wrap .course_item.c1 {
+    top: 220px;
+    height: 780px;
+  }
+
+  .course .item_wrap .course_item.c2 {
+    top: 300px;
+    height: 700px;
+  }
+
+  .course .item_wrap .course_item.c3 {
+    top: 400px;
+    height: 620px;
+  }
+
+  .course .item_wrap .course_item .item_title a {
+    font-size: 3.4rem;
+  }
+
+  .course .item_wrap .course_item .item_title .mark {
+    width: 40px;
+    height: 40px;
+  }
+  .course .item_wrap .course_item .item_desc .item_text {
+    font-size: 2rem;
+  }
+
+  .course .item_wrap .course_item .item_desc .item_text .item_text_bottom {
+    font-size: 3rem;    
+  }
+
+/* 데이터 영역 */
+
+  .data {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 50px 0;
+  }
+  .data .box {
+    padding: 10px;
+    height: 300px;
+  }
+  .data .user{
+    width: 32%;
+  }
+
+  .data .user .user_top {
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .data .user .user_top p {    
+    padding: 20px 5px;
+    font-size: 4rem;
+  }
+
+  .data .user .user_top p em {
+    font-style: normal;
+    font-size: 2.6rem;
+  }
+
+  .data .user .user_top p:last-child { 
+    border-left: none;
+    border-top: 3px solid #014023;
+  }
+
+  .data .user .user_bottom {
+    height: 110px;  
+    flex-direction: column;  
+    padding-top: 20px;
+  }
+  .data .user .user_bottom .percent {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .data .user .user_bottom .percent img{
+    width: 35px;
+    height: 35px;
+  }
+  .data .user .user_bottom .percent p {
+    font-size: 2.2rem;
+    padding-left: 5px;
+  }
+  .data .ranking{
+    width: 65%;
+  }
+  .data .ranking .rank {    
+    height: 50px;
+    padding-right: 15px;
+  }
+
+  .data .ranking .rank img {
+    width: 35px;
+    height: 35px;  
+  }
+  .data .ranking .rank p {
+    font-size: 2.2rem;    
+    padding: 15px 5px;
+  }
+  .data .ranking .rank .left{
+    display: flex;
+    width: 35%;
+  }
+
+  .data .ranking .rank .right{ 
+    width: 65%;
+    margin-right: 0px;  
+    text-align: right;
+  }
+
+  .data .ranking span {
+    font-size: 2rem;   
+  }
+}
+
+@media screen and (max-width:750px) {
+  /* 스와이퍼 컨트롤 */
+  .swiper-pagination { left: 39%; }
+  .autoplay-progress { left: 42%; }
+  .button { display: none; }
+}
+
+@media screen and (max-width:481px) {
+
+  /* 스와이퍼 */
+  .mySwiper2 .swiper-slide .text_wrap .sub {display: none;}
+  /* 스와이퍼 컨트롤 */
+  .swiper-pagination { left: 36%; }
+  .autoplay-progress { left: 40.5%; }
+  
+
+  /* 데이터 영역 */
+  .data {
+    padding: 30px 0 0px 0;
+  }
+  .data .box {
+    padding: 10px;
+    height: 190px;
+  }
+  .data .user{
+    width: 100%;
+  }
+
+  .data .user .user_top {
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .data .user .user_top p {    
+    padding: 20px 5px;
+    font-size: 4rem;
+  }
+
+  .data .user .user_top p em {
+    font-style: normal;
+    font-size: 2.6rem;
+  }
+
+  .data .user .user_top p:last-child { 
+    border-left: 3px solid #014023;
+    border-top: none;
+  }
+
+  .data .user .user_bottom {
+    height: 65px;  
+    flex-direction: row;  
+    padding-top: 20px;
+  }
+  .data .user .user_bottom .percent {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .data .user .user_bottom .percent img{
+    width: 35px;
+    height: 35px;
+  }
+  .data .user .user_bottom .percent p {
+    font-size: 2.2rem;
+    padding-left: 5px;
+  }
+  .data .ranking{ display: none; }
+
+
+  /* 푸터영역 */
+  #footer {
+    height: 40vh;
+  }
+  .footer { 
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .footer .f_top { 
+    width: 25%;
+    float: right;
+  }
+  .footer .f_top .totop_btn img{
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-right: 0rem;
+    margin-left: 4.5rem;
+    float: right;
+  }
+
+  .footer .f_bottom {
+    width: 70%;
+    float: left;
+    flex-direction: column;
+  }
+
+  .footer .f_bottom .f_bottom_L { width: 100%; }
+  .footer .f_bottom .f_bottom_L .f_info { 
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  .footer .f_bottom .f_bottom_L .f_info li .mob{ display: none; }
+
+  .footer .f_bottom .f_bottom_L .f_info li {
+    padding-left: 10px;        
+  }
+  .footer .f_bottom .f_bottom_L .f_info li:nth-of-type(1) {padding-left: 1rem;}
+
+  .footer .f_bottom .f_bottom_R {
+    width: 100%;    
+    text-align: left;
+    padding-left: 1rem;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width:421px) {
+
+  /* 스와이퍼 */
+  .mySwiper2 .swiper-slide .text_wrap .sub {display: none;}  
+  /* 스와이퍼 컨트롤 */
+  .swiper-pagination { left: 33%; }
+  .autoplay-progress { left: 38%; }
+
+  /* 추천코스 */
+  .course .course_title {
+    font-size: 4rem;
+  }
+
+  .course .course_title em {    
+    font-size: 2.2rem;    
+  }
+  .course .item_wrap .course_item.c1 {
+    top: 220px;
+    height: 780px;
+  }
+
+  .course .item_wrap .course_item.c2 {
+    top: 300px;
+    height: 700px;
+  }
+
+  .course .item_wrap .course_item.c3 {
+    top: 400px;
+    height: 620px;
+  }
+
+  .course .item_wrap .course_item .item_title a {
+    font-size: 3.4rem;
+  }
+
+  .course .item_wrap .course_item .item_title .mark {
+    width: 40px;
+    height: 40px;
+  }
+  .course .item_wrap .course_item .item_desc .item_text {
+    font-size: 2rem;
+  }
+
+  .course .item_wrap .course_item .item_desc .item_text .item_text_bottom {
+    font-size: 3rem;    
+  }
+
+
+  .course .item_wrap .course_item .item_desc img.mob {   
+    display: block;
+    width: 100%;
+    height: 180px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width:375px) {
+  /* 스와이퍼 */
+  .mySwiper2 .swiper-slide .text_wrap .sub {display: none;}
+
+  /* 추천코스 */
+  .course .item_wrap .course_item {
+    padding: 20px 25px;
+  }
+  .course .course_title {
+    font-size: 3.4rem;
+  }
+
+  .course .item_wrap .course_item.c1 {
+    top: 220px;
+    height: 660px;
+  }
+
+  .course .item_wrap .course_item.c2 {
+    top: 280px;
+    height: 600px;
+  }
+
+  .course .item_wrap .course_item.c3 {
+    top: 350px;
+    height: 540px;
+  }
+
+.course .item_wrap .course_item .lookbtn {
+    top: 2.5rem;    
+  }
+
+
+  .course .item_wrap .course_item .item_title a {
+    font-size: 2.7rem;
+  }
+
+  .course .item_wrap .course_item .item_title .mark {
+    width: 35px;
+    height: 35px;
+  }
+  .course .item_wrap .course_item .item_desc .item_text {
+    font-size: 1.8rem;
+  }
+
+  .course .item_wrap .course_item .item_desc .item_text .item_text_bottom {
+    font-size: 2.6rem;    
+  }
+
+  .course .item_wrap .course_item .item_desc .item_text .item_text_bottom b {
+    padding-right: 10px;
+  }
+  .course .item_wrap .course_item .item_desc img.mob {
+    height: 160px;
+  }
+
+
+}
+
